@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Apicultura Don Carlos · Miel pura de Paraguay</title>
-<meta name="description" content="Miel pura de nuestras propias colmenas, materiales apícolas y capacitación profesional. Empresa familiar desde 2004 en Asunción, Paraguay. Pedí por WhatsApp.">
-<meta property="og:title" content="Apicultura Don Carlos · Miel pura de Paraguay">
-<meta property="og:description" content="De nuestras colmenas a tu mesa. Miel, materiales apícolas y cursos. Pedí por WhatsApp.">
+<title>Miel Don Carlos · 20 años de miel paraguaya</title>
+<meta name="description" content="Empresa familiar paraguaya desde 2006. Cerca de 1.000 colmenas en Pozo Colorado, Chaco, y una línea de ~30 productos de miel. Pedí por WhatsApp.">
+<meta property="og:title" content="Miel Don Carlos · 20 años de miel paraguaya">
+<meta property="og:description" content="Desde 2006, miel paraguaya de nuestras colmenas del Chaco. Pedí por WhatsApp.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0c0905">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,4 90,27 90,73 50,96 10,73 10,27' fill='%23ffb81c'/%3E%3C/svg%3E">
@@ -54,11 +54,8 @@ h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:700;line-height:1.05;l
 .eyebrow::before{content:"";width:12px;height:14px;background:var(--gold);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
 .gold-text{
   background:linear-gradient(100deg,#ffe29a 0%,#ffb81c 35%,#ff8a00 60%,#ffd56b 100%);
-  background-size:200% 100%;
   -webkit-background-clip:text;background-clip:text;color:transparent;
-  animation:shine 6s linear infinite;
 }
-@keyframes shine{to{background-position:-200% 0}}
 
 /* ---------- Buttons ---------- */
 .btn{
@@ -164,6 +161,7 @@ section{position:relative}
   cursor:pointer;will-change:transform;
 }
 .cf-card.is-active{cursor:default;border-color:rgba(255,184,28,.55);box-shadow:0 40px 90px rgba(0,0,0,.6),0 0 70px rgba(255,160,0,.22)}
+.cf-badge{position:absolute;top:14px;left:14px;z-index:2;padding:6px 12px;border-radius:999px;background:var(--gold);color:#2a1500;font:800 12px "Manrope",sans-serif;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 8px 20px rgba(0,0,0,.4)}
 .cf-card img{display:block;width:100%;aspect-ratio:1;object-fit:cover;pointer-events:none}
 .cf-info{padding:20px 22px 24px}
 .cf-tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
@@ -184,88 +182,74 @@ section{position:relative}
 .cf-dots button[aria-current="true"]{background:var(--gold);transform:scale(1.35)}
 .product-cta{text-align:center;margin-top:46px;padding:0 16px}
 
-/* ---------- Why ---------- */
-.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-.why{padding:34px 28px;border-radius:var(--radius);background:linear-gradient(180deg,var(--panel),#160d05);border:1px solid var(--line);position:relative;overflow:hidden}
-.why::after{content:"";position:absolute;right:-30px;top:-30px;width:120px;height:130px;background:rgba(255,184,28,.06);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
-.why .ico{width:58px;height:64px;display:grid;place-items:center;margin-bottom:22px;background:linear-gradient(160deg,#ffd56b,#e07b00);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
-.why .ico svg{width:28px;height:28px;stroke:#2a1500}
-.why h3{font-size:24px;margin-bottom:10px}
-.why p{color:var(--muted);font-size:16px}
+/* ---------- Fotos ---------- */
+.photo{position:relative;margin:0;border-radius:24px;overflow:hidden;border:1px solid var(--line);box-shadow:0 40px 80px rgba(0,0,0,.5);background:var(--panel)}
+.photo img{display:block;width:100%;height:100%;object-fit:cover}
+.photo figcaption{position:absolute;left:14px;bottom:14px;padding:6px 12px;border-radius:999px;background:rgba(12,9,5,.78);backdrop-filter:blur(6px);font-size:13px;font-weight:700;color:var(--gold2)}
+.ico{width:58px;height:64px;display:grid;place-items:center;margin-bottom:22px;background:linear-gradient(160deg,#ffd56b,#e07b00);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+.ico svg{width:28px;height:28px;stroke:#2a1500;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
-/* ---------- Tilt cards (shop) ---------- */
-.shop{background:var(--bg2)}
-.shop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;perspective:1200px}
-.tilt{
-  position:relative;padding:34px 30px 30px;border-radius:26px;
-  background:
-    radial-gradient(120% 80% at var(--mx,50%) var(--my,0%),rgba(255,184,28,.18),transparent 55%),
-    linear-gradient(180deg,#24170a,#170e06);
-  border:1px solid var(--line);
-  transform-style:preserve-3d;transition:transform .5s cubic-bezier(.2,.8,.2,1),border-color .3s,box-shadow .3s;
-  will-change:transform;
-}
-.tilt:hover{border-color:rgba(255,184,28,.45);box-shadow:0 30px 60px rgba(0,0,0,.45)}
-.tilt > *{transform:translateZ(30px)}
-.tilt .art{height:150px;margin:-6px 0 22px;display:grid;place-items:center;transform:translateZ(60px)}
-.tilt .art svg{width:150px;height:150px;filter:drop-shadow(0 18px 24px rgba(0,0,0,.5))}
-.tilt h3{font-size:25px;margin-bottom:10px}
-.tilt p{color:var(--muted);font-size:16px;margin-bottom:22px}
-.tilt .link{display:inline-flex;align-items:center;gap:8px;font-weight:800;color:var(--wa);font-size:15px}
-.tilt .link:hover{gap:12px}
-.tilt .link svg{width:18px;height:18px}
+/* ---------- Origen ---------- */
+.origin-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.origin .photo{aspect-ratio:16/10}
+.origin-media{position:relative}
+.origin-badge{position:absolute;right:-18px;top:-26px;width:132px;height:146px;display:grid;place-content:center;text-align:center;
+  background:linear-gradient(160deg,#ffd56b,#e07b00);color:#2a1500;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);filter:drop-shadow(0 20px 30px rgba(0,0,0,.5))}
+.origin-badge b{font:900 40px/1 "Fraunces",serif}
+.origin-badge span{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.origin h2{font-size:clamp(36px,4.4vw,58px);margin:18px 0 24px}
+.origin p{color:var(--muted);font-size:18px;margin-bottom:18px}
+.origin p strong{color:var(--cream)}
+.origin .btn{margin-top:14px}
 
-/* ---------- Services ---------- */
-.serv-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-.serv{display:flex;gap:24px;padding:30px;border-radius:var(--radius);border:1px solid var(--line);background:rgba(255,184,28,.03);transition:background .3s,transform .3s}
-.serv:hover{background:rgba(255,184,28,.07);transform:translateY(-4px)}
-.serv .num{font-family:"Fraunces",serif;font-size:46px;font-weight:900;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--gold);flex:none;width:64px}
-.serv h3{font-size:24px;margin-bottom:8px}
-.serv p{color:var(--muted);font-size:16px}
+/* ---------- Trayectoria ---------- */
+.journey{position:relative;max-width:1060px;margin:0 auto}
+.journey::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;margin-left:-1px;background:linear-gradient(transparent,var(--gold) 4%,var(--gold) 96%,transparent);opacity:.6}
+.jstep{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center;margin-bottom:76px}
+.jstep:last-child{margin-bottom:0}
+.jstep::before{content:"";position:absolute;left:50%;top:50%;width:26px;height:29px;margin:-14px 0 0 -13px;background:var(--gold);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);box-shadow:0 0 0 6px var(--bg)}
+.jtext{text-align:right}
+.jstep:nth-child(even) .jtext{grid-column:2;text-align:left}
+.jstep:nth-child(even) .jmedia{grid-column:1;grid-row:1}
+.jyear{font:900 54px/1 "Fraunces",serif;color:var(--gold)}
+.jtext h3{font-size:28px;margin:10px 0 10px}
+.jtext p{color:var(--muted);font-size:17px}
+.jmedia .photo{aspect-ratio:4/3}
+.jcard{padding:34px 32px;border-radius:24px;background:linear-gradient(160deg,#2a1a0b,#150d05);border:1px solid var(--line)}
+.jcard b{display:block;font:900 64px/1 "Fraunces",serif;color:var(--cream);margin-bottom:10px}
+.jcard span{color:var(--muted);font-size:16px}
 
-/* ---------- Course ---------- */
-.course{background:linear-gradient(180deg,var(--bg),#1b0f04)}
-.course-card{
-  position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;
-  padding:64px;border-radius:36px;overflow:hidden;
-  background:
-    radial-gradient(70% 90% at 100% 0%,rgba(255,184,28,.28),transparent 60%),
-    linear-gradient(140deg,#2c1a08,#160d05);
-  border:1px solid rgba(255,184,28,.3);
-  box-shadow:0 50px 100px rgba(0,0,0,.5);
-}
-.course-card h2{font-size:clamp(36px,4.4vw,56px);margin:18px 0 18px}
-.course-card p{color:var(--muted);font-size:18px;margin-bottom:26px}
-.ticks{list-style:none;display:grid;gap:14px;margin-bottom:36px}
-.ticks li{display:flex;gap:14px;align-items:flex-start;font-weight:600}
-.ticks li::before{content:"";flex:none;width:22px;height:24px;margin-top:2px;background:var(--gold);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
-.cube-scene{height:380px;perspective:1100px;display:grid;place-items:center}
-.hexprism{position:relative;width:180px;height:220px;transform-style:preserve-3d;animation:spin 14s linear infinite}
-.hexprism .face{position:absolute;left:50%;top:0;width:104px;height:220px;margin-left:-52px;
-  background:linear-gradient(180deg,rgba(255,213,107,.95),rgba(224,123,0,.9));
-  border:1px solid rgba(255,240,200,.6);display:grid;place-items:center;backface-visibility:visible;
-  font-family:"Fraunces",serif;font-weight:900;font-size:22px;color:#2a1500;text-align:center;line-height:1.1;
-  box-shadow:inset 0 0 40px rgba(120,50,0,.4)}
-.hexprism .face:nth-child(1){transform:rotateY(0deg) translateZ(90px)}
-.hexprism .face:nth-child(2){transform:rotateY(60deg) translateZ(90px)}
-.hexprism .face:nth-child(3){transform:rotateY(120deg) translateZ(90px)}
-.hexprism .face:nth-child(4){transform:rotateY(180deg) translateZ(90px)}
-.hexprism .face:nth-child(5){transform:rotateY(240deg) translateZ(90px)}
-.hexprism .face:nth-child(6){transform:rotateY(300deg) translateZ(90px)}
-.hexprism .cap{position:absolute;left:50%;width:208px;height:180px;margin-left:-104px;background:linear-gradient(160deg,#ffe29a,#ffb81c);clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
-.hexprism .cap.top{top:-90px;transform:rotateX(90deg)}
-.hexprism .cap.bot{bottom:-90px;transform:rotateX(-90deg);background:#7a3c00}
-@keyframes spin{from{transform:rotateX(-18deg) rotateY(0)}to{transform:rotateX(-18deg) rotateY(360deg)}}
-.prism-shadow{width:220px;height:40px;margin-top:40px;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.6),transparent)}
+/* ---------- Hoy ---------- */
+.today-hero{position:relative;border-radius:32px;overflow:hidden;min-height:540px;display:flex;align-items:flex-end;border:1px solid var(--line)}
+.today-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.today-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,9,5,.05) 25%,rgba(12,9,5,.93))}
+.today-hero .inner{position:relative;z-index:1;padding:52px;max-width:760px}
+.today-hero h2{font-size:clamp(40px,6vw,76px);margin:16px 0 14px}
+.today-hero p{font-size:19px;color:#e9dcc4}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:24px;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:var(--panel)}
+.stat{padding:32px 28px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font:900 50px/1 "Fraunces",serif;color:var(--gold);margin-bottom:10px}
+.stat span{color:var(--muted);font-size:15px}
+.lines{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:30px;color:var(--muted);font-weight:700}
+.lines span.l{padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:rgba(255,184,28,.06);color:var(--gold2)}
 
-/* ---------- Story / timeline ---------- */
-.timeline{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.timeline::before{content:"";position:absolute;left:0;right:0;top:44px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
-.tl{position:relative;padding-top:90px}
-.tl .dot{position:absolute;top:22px;left:0;width:46px;height:50px;background:linear-gradient(160deg,#ffd56b,#e07b00);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);box-shadow:0 0 30px rgba(255,184,28,.6)}
-.tl .year{font-family:"Fraunces",serif;font-size:52px;font-weight:900;color:var(--gold);line-height:1;margin-bottom:12px}
-.tl h3{font-size:24px;margin-bottom:8px}
-.tl p{color:var(--muted);font-size:16px}
+/* ---------- Empresas ---------- */
+.b2b{background:var(--bg2)}
+.b2b-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.b2b .photo{aspect-ratio:16/10}
+.b2b-list{list-style:none;display:grid;gap:12px;margin:28px 0 36px}
+.b2b-list li{display:flex;gap:16px;align-items:center;padding:16px 20px;border-radius:16px;background:rgba(255,184,28,.05);border:1px solid var(--line);font-weight:700}
+.b2b-list li::before{content:"";flex:none;width:20px;height:22px;background:var(--gold);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+
+/* ---------- Valores ---------- */
+.values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.value{padding:32px 26px;border-radius:22px;background:linear-gradient(180deg,var(--panel),#120b05);border:1px solid var(--line)}
+.value h3{font-size:24px;margin-bottom:10px}
+.value p{color:var(--muted);font-size:16px}
+.quote{margin:80px auto 0;max-width:920px;text-align:center;font:italic 500 clamp(24px,3vw,36px)/1.35 "Fraunces",serif;color:var(--cream)}
+.quote::before{content:"“";display:block;font-size:90px;line-height:.6;color:var(--gold);margin-bottom:10px}
+.quote cite{display:block;margin-top:22px;font:800 13px "Manrope",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-style:normal}
 
 /* ---------- Steps ---------- */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:s}
@@ -323,11 +307,11 @@ footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;
 
 /* ---------- Responsive ---------- */
 @media (max-width:1020px){
-  .why-grid{grid-template-columns:repeat(2,1fr)}
-  .shop-grid{grid-template-columns:repeat(2,1fr)}
-  .product-grid,.course-card{grid-template-columns:1fr}
-  .course-card{padding:44px 32px}
-  .cube-scene{height:300px}
+  .values-grid{grid-template-columns:repeat(2,1fr)}
+  .origin-grid,.b2b-grid{grid-template-columns:1fr;gap:56px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
   .nav-links{display:none}
 }
 @media (max-width:720px){
@@ -340,11 +324,20 @@ footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;
   .hero-ctas .btn{width:100%}
   .hero-trust{gap:18px}
   .hint3d{display:none}
-  .why-grid,.shop-grid,.serv-grid,.steps,.timeline{grid-template-columns:1fr}
-  .timeline::before{display:none}
-  .tl{padding-top:72px}
-  .serv{flex-direction:column;gap:10px}
-  .course-card{padding:36px 22px;border-radius:28px}
+  .values-grid,.steps{grid-template-columns:1fr}
+  .origin-badge{right:-6px;top:-30px;width:104px;height:116px}
+  .origin-badge b{font-size:30px}
+  .journey::before{left:13px}
+  .jstep{grid-template-columns:1fr;gap:22px;padding-left:46px;margin-bottom:56px}
+  .jstep::before{left:13px;top:6px;margin-top:0}
+  .jtext,.jstep:nth-child(even) .jtext{grid-column:1;text-align:left}
+  .jstep:nth-child(even) .jmedia{grid-column:1;grid-row:2}
+  .jyear{font-size:42px}
+  .today-hero{min-height:480px;border-radius:24px}
+  .today-hero .inner{padding:28px 22px}
+  .stat{padding:24px 18px}
+  .stat b{font-size:38px}
+  .quote{margin-top:56px}
   .nav .btn span{display:none}
   .nav .btn{padding:12px}
   .brand small{display:none}
@@ -381,15 +374,15 @@ footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;
 
 <header class="nav" id="nav">
   <div class="wrap">
-    <a href="#" class="brand" aria-label="Apicultura Don Carlos, inicio">
+    <a href="#" class="brand" aria-label="Miel Don Carlos, inicio">
       <span class="brand-hex"><svg viewBox="0 0 24 24" fill="#2a1500"><ellipse cx="12" cy="13.5" rx="4.2" ry="6"/><path d="M8 11.5h8M8 14.5h8M8.6 17.3h6.8" stroke="#ffb81c" stroke-width="1.4"/><ellipse cx="7" cy="7.5" rx="3.4" ry="2.1" fill="#fff4dc" opacity=".9" transform="rotate(-30 7 7.5)"/><ellipse cx="17" cy="7.5" rx="3.4" ry="2.1" fill="#fff4dc" opacity=".9" transform="rotate(30 17 7.5)"/></svg></span>
-      <span>Don Carlos<small>Apicultura · Paraguay</small></span>
+      <span>Don Carlos<small>Miel de abejas · desde 2006</small></span>
     </a>
     <nav class="nav-links" aria-label="Secciones">
-      <a href="#miel">Miel</a>
-      <a href="#apicultores">Para apicultores</a>
-      <a href="#cursos">Cursos</a>
-      <a href="#historia">Historia</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#miel">Productos</a>
+      <a href="#historia">Trayectoria</a>
+      <a href="#empresas">Empresas</a>
     </nav>
     <a class="btn btn-wa" data-wa="¡Hola Don Carlos! Vi su página y quiero hacer una consulta." href="https://wa.me/595984399696">
       <svg><use href="#i-wa"/></svg><span>Escribinos</span>
@@ -403,19 +396,19 @@ footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;
   <canvas id="hero3d" aria-hidden="true"></canvas>
   <div class="wrap">
     <div class="hero-copy">
-      <span class="eyebrow">Apicultura profesional paraguaya · desde 2004</span>
-      <h1>Miel <em>pura</em>,<br><span class="gold-text">directo de la colmena</span> a tu mesa.</h1>
-      <p class="lead">Producimos nuestra propia miel en Paraguay y equipamos a apicultores de todo el país. <strong>Sin intermediarios, sin mezclas:</strong> pedí hoy por WhatsApp y te atendemos personalmente.</p>
+      <span class="eyebrow">Empresa familiar paraguaya · desde 2006</span>
+      <h1>Miel paraguaya con <span class="gold-text">20 años</span> de <em>historia.</em></h1>
+      <p class="lead">Empezamos en 2006 con 50 colmenas. Hoy cuidamos <strong>cerca de 1.000 colmenas en Pozo Colorado, Chaco,</strong> y nuestra miel llega a hogares, supermercados, confiterías y restaurantes.</p>
       <div class="hero-ctas">
         <a class="btn btn-wa" data-wa="¡Hola Don Carlos! Quiero comprar miel. ¿Qué variedades y presentaciones tienen disponibles?" href="https://wa.me/595984399696">
-          <svg><use href="#i-wa"/></svg> Quiero mi miel
+          <svg><use href="#i-wa"/></svg> Pedir por WhatsApp
         </a>
-        <a class="btn btn-ghost" href="#miel">Ver productos <svg style="width:18px;height:18px"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost" href="#nosotros">Conocé nuestra historia <svg style="width:18px;height:18px"><use href="#i-arrow"/></svg></a>
       </div>
       <div class="hero-trust">
-        <div><b>2004</b><span>Nuestras primeras<br>colmenas</span></div>
-        <div><b>100%</b><span>Natural, sin<br>aditivos</span></div>
-        <div><b>3 en 1</b><span>Miel · Servicios<br>· Capacitación</span></div>
+        <div><b>2006</b><span>Año de<br>inicio</span></div>
+        <div><b>≈1.000</b><span>Colmenas en<br>el Chaco</span></div>
+        <div><b>≈30</b><span>Artículos y<br>presentaciones</span></div>
       </div>
     </div>
   </div>
@@ -424,10 +417,27 @@ footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;
 
 <div class="ticker-wrap" aria-hidden="true"><div class="ticker">
   <div class="ticker-track">
-    <span>Miel 100% pura</span><span>Producción propia</span><span>Empresa familiar</span><span>Desde 2004</span><span>Materiales apícolas</span><span>Material vivo</span><span>Cursos en todos los niveles</span><span>Asunción · Paraguay</span>
-    <span>Miel 100% pura</span><span>Producción propia</span><span>Empresa familiar</span><span>Desde 2004</span><span>Materiales apícolas</span><span>Material vivo</span><span>Cursos en todos los niveles</span><span>Asunción · Paraguay</span>
+    <span>Desde 2006</span><span>Empresa familiar paraguaya</span><span>≈1.000 colmenas en Pozo Colorado</span><span>Línea Clásica</span><span>Línea Gourmet</span><span>Línea Bienestar</span><span>Apisana</span><span>Asunción · Paraguay</span>
+    <span>Desde 2006</span><span>Empresa familiar paraguaya</span><span>≈1.000 colmenas en Pozo Colorado</span><span>Línea Clásica</span><span>Línea Gourmet</span><span>Línea Bienestar</span><span>Apisana</span><span>Asunción · Paraguay</span>
   </div>
 </div></div>
+
+<!-- ================= ORIGEN ================= -->
+<section class="sec origin" id="nosotros">
+  <div class="wrap origin-grid">
+    <div class="origin-media reveal">
+      <figure class="photo"><img src="img/historia/fundadores.webp" alt="Los fundadores de Miel Don Carlos con trajes de apicultor en el monte" width="462" height="258"><figcaption>Los comienzos</figcaption></figure>
+      <div class="origin-badge"><b>20</b><span>años</span></div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Nuestra historia</span>
+      <h2>Una marca que lleva el nombre <span class="gold-text">de un padre.</span></h2>
+      <p>En 2006, <strong>Gerardo y su hermano mayor Carlos</strong> hicieron un curso de apicultura y se entusiasmaron con las abejas. Con el apoyo de su padre, también llamado Carlos, empezaron con <strong>50 colmenas</strong> en un pequeño establecimiento alquilado en Chaco'i.</p>
+      <p>La marca nació como homenaje a él. Veinte años después, Miel Don Carlos sigue siendo una empresa familiar paraguaya: más grande y más profesional, con la misma convicción del primer día.</p>
+      <a class="btn btn-ghost" href="#historia">Ver nuestra trayectoria <svg style="width:18px;height:18px"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
 
 <!-- ================= PRODUCTOS (carrusel 3D) ================= -->
 <section class="sec product" id="miel">
@@ -435,50 +445,50 @@ footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;
     <div class="sec-head center reveal" style="text-align:center">
       <span class="eyebrow">Nuestros productos</span>
       <h2>Elegí tu miel <span class="gold-text">Don Carlos.</span></h2>
-      <p>Clásica para todos los días, gourmet para darte un gusto, medicinal para cuidarte. Tocá el que te guste y pedilo por WhatsApp.</p>
+      <p>Cerca de 30 artículos y presentaciones en cinco líneas: Clásica, Especialidades, Gourmet, Apisana y Bienestar. Tocá el que te guste y pedilo por WhatsApp.</p>
     </div>
   </div>
   <div class="cf reveal" id="cf" tabindex="0" role="region" aria-roledescription="carrusel" aria-label="Productos Don Carlos">
     <canvas id="combs3d" aria-hidden="true"></canvas>
     <div class="cf-track">
+      <article class="cf-card" aria-roledescription="producto"><span class="cf-badge">★ El más vendido</span>
+        <img src="img/apisana.webp" alt="Frasco de Miel de Abejas Apisana Don Carlos" width="286" height="286">
+        <div class="cf-info"><span class="cf-tag">Línea Apisana</span><h3>Miel Apisana</h3><p>El producto más vendido de nuestra línea. Consultanos por sus beneficios.</p>
+        <a class="btn btn-wa" data-wa="¡Hola Don Carlos! Quiero pedir Miel Apisana. ¿Presentaciones y precios?" href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Pedir por WhatsApp</a></div>
+      </article>
       <article class="cf-card" aria-roledescription="producto">
         <img src="img/linea-clasica.webp" alt="Línea Clásica Don Carlos: miel de abeja en botellas y pote" width="286" height="286">
-        <div class="cf-info"><span class="cf-tag">Línea Clásica</span><h3>Miel de Abeja</h3><p>Nuestra miel pura de siempre, en botella y en pote. La de todos los días.</p>
-        <a class="btn btn-wa" data-wa="¡Hola Don Carlos! Quiero pedir Miel de Abeja de la Línea Clásica. ¿Qué presentaciones y precios tienen?" href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Pedir por WhatsApp</a></div>
+        <div class="cf-info"><span class="cf-tag">Línea Clásica</span><h3>Miel de Abeja</h3><p>Miel pura de abejas en diferentes tamaños. La de todos los días.</p>
+        <a class="btn btn-wa" data-wa="¡Hola Don Carlos! Quiero pedir Miel de Abeja de la Línea Clásica. ¿Qué tamaños y precios tienen?" href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Pedir por WhatsApp</a></div>
       </article>
       <article class="cf-card" aria-roledescription="producto">
         <img src="img/linea-gourmet.webp" alt="Línea Gourmet Don Carlos: miel con jengibre, con limón y con canela" width="286" height="286">
-        <div class="cf-info"><span class="cf-tag">Línea Gourmet</span><h3>Jengibre · Limón · Canela</h3><p>Miel con jengibre, miel con limón y miel con canela. Sabores para darte un gusto.</p>
+        <div class="cf-info"><span class="cf-tag">Línea Gourmet</span><h3>Jengibre · Limón · Canela</h3><p>Miel con jengibre, con limón y con canela. Sabores para darte un gusto.</p>
         <a class="btn btn-wa" data-wa="¡Hola Don Carlos! Quiero pedir productos de la Línea Gourmet (miel con jengibre, limón o canela). ¿Precios y disponibilidad?" href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Pedir por WhatsApp</a></div>
       </article>
       <article class="cf-card" aria-roledescription="producto">
-        <img src="img/linea-medicinal.webp" alt="Línea Medicinal Don Carlos: miel con eucalipto, polen y miel con propóleo" width="286" height="286">
-        <div class="cf-info"><span class="cf-tag">Línea Medicinal</span><h3>Eucalipto · Polen · Propóleo</h3><p>Miel con eucalipto, polen y miel con propóleo, para acompañarte todo el año.</p>
-        <a class="btn btn-wa" data-wa="¡Hola Don Carlos! Quiero pedir productos de la Línea Medicinal (miel con eucalipto, polen o miel con propóleo). ¿Precios y disponibilidad?" href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Pedir por WhatsApp</a></div>
+        <img src="img/linea-medicinal.webp" alt="Don Carlos: miel con eucalipto, polen y miel con propóleo" width="286" height="286">
+        <div class="cf-info"><span class="cf-tag">Especialidades</span><h3>Eucalipto · Polen · Propóleo</h3><p>Miel con propóleos, miel con eucalipto y propóleos, y polen.</p>
+        <a class="btn btn-wa" data-wa="¡Hola Don Carlos! Quiero pedir miel con propóleo, con eucalipto o polen. ¿Precios y disponibilidad?" href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Pedir por WhatsApp</a></div>
       </article>
       <article class="cf-card" aria-roledescription="producto">
         <img src="img/linea-polen-jalea.webp" alt="Don Carlos: extracto de propóleo, miel con polen y miel con jalea real" width="286" height="286">
-        <div class="cf-info"><span class="cf-tag">Línea Medicinal</span><h3>Polen · Jalea Real</h3><p>Miel con polen, miel con jalea real y extracto de propóleo.</p>
-        <a class="btn btn-wa" data-wa="¡Hola Don Carlos! Quiero pedir miel con polen, miel con jalea real o extracto de propóleo. ¿Precios y disponibilidad?" href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Pedir por WhatsApp</a></div>
+        <div class="cf-info"><span class="cf-tag">Línea Bienestar</span><h3>Polen · Jalea Real</h3><p>Miel con jalea real, miel con polen y extracto de propóleos.</p>
+        <a class="btn btn-wa" data-wa="¡Hola Don Carlos! Quiero pedir productos de la Línea Bienestar (jalea real, polen o extracto de propóleo). ¿Precios y disponibilidad?" href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Pedir por WhatsApp</a></div>
       </article>
       <article class="cf-card" aria-roledescription="producto">
         <img src="img/miel-jengibre.webp" alt="Frasco de Miel con Jengibre Don Carlos" width="286" height="286">
-        <div class="cf-info"><span class="cf-tag">Gourmet</span><h3>Miel con Jengibre</h3><p>Miel pura con el toque picante del jengibre, en frasco de vidrio.</p>
+        <div class="cf-info"><span class="cf-tag">Línea Gourmet</span><h3>Miel con Jengibre</h3><p>Miel pura con el toque picante del jengibre, en frasco de vidrio.</p>
         <a class="btn btn-wa" data-wa="¡Hola Don Carlos! Quiero pedir Miel con Jengibre. ¿Precio y disponibilidad?" href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Pedir por WhatsApp</a></div>
       </article>
       <article class="cf-card" aria-roledescription="producto">
-        <img src="img/apisana.webp" alt="Frasco de Miel de Abejas Apisana Don Carlos" width="286" height="286">
-        <div class="cf-info"><span class="cf-tag">Especial</span><h3>Miel Apisana</h3><p>Nuestra miel de abejas Apisana, en frasco de vidrio. Consultanos por sus beneficios.</p>
-        <a class="btn btn-wa" data-wa="¡Hola Don Carlos! Quiero información y precio de la Miel de Abejas Apisana." href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Pedir por WhatsApp</a></div>
-      </article>
-      <article class="cf-card" aria-roledescription="producto">
         <img src="img/sachet.webp" alt="Pote de Miel en Sachet Don Carlos, 80 unidades" width="286" height="286">
-        <div class="cf-info"><span class="cf-tag">Práctica</span><h3>Miel en Sachet</h3><p>Pote con 80 sachets. Ideal para oficinas, cafeterías, hoteles y para llevar.</p>
+        <div class="cf-info"><span class="cf-tag">Línea Clásica</span><h3>Miel en Sachet</h3><p>Pote con 80 sachets. Ideal para oficinas, cafeterías, hoteles y para llevar.</p>
         <a class="btn btn-wa" data-wa="¡Hola Don Carlos! Quiero pedir Miel en Sachet (pote de 80 unidades). ¿Precio y disponibilidad?" href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Pedir por WhatsApp</a></div>
       </article>
       <article class="cf-card" aria-roledescription="producto">
         <img src="img/propoleo.webp" alt="Gotero de Extracto de Propóleo Don Carlos" width="286" height="286">
-        <div class="cf-info"><span class="cf-tag">De la colmena</span><h3>Extracto de Propóleo</h3><p>Extracto de propóleo en gotero, directo de nuestras colmenas.</p>
+        <div class="cf-info"><span class="cf-tag">Línea Bienestar</span><h3>Extracto de Propóleo</h3><p>Extracto de propóleo en gotero, de la colmena a tu botiquín.</p>
         <a class="btn btn-wa" data-wa="¡Hola Don Carlos! Quiero pedir Extracto de Propóleo. ¿Precio y disponibilidad?" href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Pedir por WhatsApp</a></div>
       </article>
     </div>
@@ -491,152 +501,105 @@ footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;
   </div>
 </section>
 
-<!-- ================= WHY ================= -->
+<!-- ================= TRAYECTORIA ================= -->
+<section class="sec" id="historia">
+  <div class="wrap">
+    <div class="sec-head center reveal" style="text-align:center">
+      <span class="eyebrow">Trayectoria</span>
+      <h2>20 años de trabajo, <span class="gold-text">etapa por etapa.</span></h2>
+      <p>No llegamos hasta acá de un día para otro. Cada etapa nos dejó un aprendizaje que hoy está en cada frasco.</p>
+    </div>
+    <div class="journey">
+      <div class="jstep reveal">
+        <div class="jtext"><div class="jyear">2006</div><h3>El origen</h3><p>Gerardo y Carlos empiezan con 50 colmenas en Chaco'i, con el apoyo de su padre. Muestras, degustaciones y combinaciones especiales para que la gente conozca la miel y vuelva a comprar.</p></div>
+        <div class="jmedia"><div class="jcard"><b>50</b><span>colmenas iniciales en Chaco'i</span></div></div>
+      </div>
+      <div class="jstep reveal">
+        <div class="jtext"><div class="jyear">2009–2010</div><h3>Escuchar a quien nos elige</h3><p>Cinthia se suma para ordenar cuentas, compras y administración. En la Expo de la Rural vendemos mucha miel y confirmamos el valor del contacto directo con el consumidor.</p></div>
+        <div class="jmedia"><figure class="photo"><img src="img/historia/expo.webp" alt="Gerardo en el stand de Miel Don Carlos con frascos de miel" width="461" height="344" loading="lazy"><figcaption>Ferias y degustaciones</figcaption></figure></div>
+      </div>
+      <div class="jstep reveal">
+        <div class="jtext"><div class="jyear">2011</div><h3>Nuestra primera tienda</h3><p>Abrimos un pequeño local sobre la avenida Del Agrónomo, en San Lorenzo. Muebles de segunda mano, tres estantes y un mostrador: empezamos con lo indispensable.</p></div>
+        <div class="jmedia"><div class="jcard"><b>1.ª</b><span>tienda propia · Av. Del Agrónomo, San Lorenzo</span></div></div>
+      </div>
+      <div class="jstep reveal">
+        <div class="jtext"><div class="jyear">2011–2014</div><h3>Innovación y formación</h3><p>Gerardo se capacita en Argentina y trae técnicas de alta producción, probadas primero en nuestras propias colmenas. Llegamos a enseñar en cursos y a fabricar cajas, alimentadores y cera estampada.</p></div>
+        <div class="jmedia"><figure class="photo"><img src="img/historia/cajas.webp" alt="Cajas de colmenas de madera fabricadas por Don Carlos" width="258" height="462" loading="lazy"><figcaption>Fabricación propia</figcaption></figure></div>
+      </div>
+      <div class="jstep reveal">
+        <div class="jtext"><div class="jyear">Crecer</div><h3>En las góndolas del país</h3><p>Miel Don Carlos llega a supermercados y puntos de venta. Crecer nos obligó a medir cada costo y a profesionalizar la gestión de la empresa.</p></div>
+        <div class="jmedia"><div class="jcard"><b>Súper</b><span>supermercados, distribuidoras y puntos de venta</span></div></div>
+      </div>
+      <div class="jstep reveal">
+        <div class="jtext"><div class="jyear">Foco</div><h3>Lo que mejor sabemos hacer</h3><p>Decidimos concentrarnos en la miel. Cerramos la fábrica de insumos y reinvertimos en más colmenas, instaladas en una estancia del Chaco.</p></div>
+        <div class="jmedia"><figure class="photo"><img src="img/historia/deposito.webp" alt="Camioneta cargada con colmenas frente al depósito" width="743" height="417" loading="lazy"><figcaption>Más colmenas</figcaption></figure></div>
+      </div>
+      <div class="jstep reveal">
+        <div class="jtext"><div class="jyear">2023</div><h3>Más cerca tuyo</h3><p>Empezamos a venderte directo por redes, web y WhatsApp. Apisana se convierte en el producto más vendido de toda nuestra línea.</p></div>
+        <div class="jmedia"><figure class="photo"><img src="img/historia/productos.webp" alt="Línea de productos Miel Don Carlos sobre un mueble de madera" width="462" height="209" loading="lazy"><figcaption>Nuestra línea completa</figcaption></figure></div>
+      </div>
+      <div class="jstep reveal">
+        <div class="jtext"><div class="jyear">Hoy</div><h3>Una marca paraguaya consolidada</h3><p>Cerca de 1.000 colmenas en Pozo Colorado, un equipo de 10 personas, local en Asunción y un segundo local en preparación.</p></div>
+        <div class="jmedia"><div class="jcard"><b>≈1.000</b><span>colmenas en Pozo Colorado, Chaco</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOY ================= -->
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="today-hero reveal">
+      <img src="img/historia/apiario.webp" alt="Colmenas Don Carlos en el monte chaqueño junto a una camioneta 4x4 cargada de cajas" width="993" height="689" loading="lazy">
+      <div class="inner">
+        <span class="eyebrow">Hoy</span>
+        <h2>Pozo Colorado, Chaco.</h2>
+        <p>Ahí, en pleno Chaco paraguayo, están nuestras colmenas. Desde ahí sale la miel que atiende a familias y empresas con un equipo comercial y logístico propio.</p>
+      </div>
+    </div>
+    <div class="stats reveal">
+      <div class="stat"><b>≈1.000</b><span>colmenas en producción</span></div>
+      <div class="stat"><b>≈30</b><span>artículos y presentaciones</span></div>
+      <div class="stat"><b>10</b><span>personas en el equipo fijo</span></div>
+      <div class="stat"><b>+1.000</b><span>colmenas proyectadas</span></div>
+    </div>
+    <div class="lines reveal">Nuestras líneas: <span class="l">Clásica</span><span class="l">Especialidades</span><span class="l">Gourmet</span><span class="l">Apisana</span><span class="l">Bienestar</span></div>
+  </div>
+</section>
+
+<!-- ================= EMPRESAS ================= -->
+<section class="sec b2b" id="empresas">
+  <div class="wrap b2b-grid">
+    <div class="reveal">
+      <span class="eyebrow">Para empresas</span>
+      <h2 style="font-size:clamp(36px,4.4vw,58px);margin:18px 0 18px">Miel paraguaya para <span class="gold-text">tu negocio.</span></h2>
+      <p style="color:var(--muted);font-size:18px">Abastecemos a clientes empresariales con continuidad, con equipo comercial y logístico propio.</p>
+      <ul class="b2b-list">
+        <li>Supermercados, distribuidoras y puntos de venta</li>
+        <li>Confiterías y restaurantes</li>
+        <li>Fábricas de alimentos que usan miel como materia prima</li>
+        <li>Miel en sachet para hoteles, oficinas y cafeterías</li>
+      </ul>
+      <a class="btn btn-gold" data-wa="¡Hola Don Carlos! Represento a una empresa y quiero cotizar miel por mayor. ¿Me pasan condiciones y lista de precios?" href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Cotizar para mi empresa</a>
+    </div>
+    <figure class="photo reveal"><img src="img/historia/deposito.webp" alt="Camioneta de Don Carlos cargada frente al depósito" width="743" height="417" loading="lazy"><figcaption>Equipo comercial y logístico</figcaption></figure>
+  </div>
+</section>
+
+<!-- ================= VALORES ================= -->
 <section class="sec">
   <div class="wrap">
     <div class="sec-head center reveal" style="text-align:center">
-      <span class="eyebrow">Por qué Don Carlos</span>
-      <h2>Lo que compra en el súper <span class="gold-text">no es lo mismo.</span></h2>
-      <p>Somos apicultores antes que vendedores. Sabemos de dónde sale cada frasco porque cuidamos cada colmena.</p>
+      <span class="eyebrow">Lo que nos sostiene</span>
+      <h2>Valores que <span class="gold-text">no cambiaron.</span></h2>
     </div>
-    <div class="why-grid">
-      <article class="why reveal">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8.5 5v10L12 22l-8.5-5V7z"/><path d="M12 22V12M20.5 7L12 12 3.5 7"/></svg></div>
-        <h3>100% natural</h3>
-        <p>Miel producida y procesada en forma natural, sin aditivos químicos ni artificiales.</p>
-      </article>
-      <article class="why reveal">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg></div>
-        <h3>Empresa familiar</h3>
-        <p>Empezamos en 2004 con 50 colmenas en los palmares del Bajo Chaco. La misma familia te atiende hoy.</p>
-      </article>
-      <article class="why reveal">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5L7 22l5-3 5 3-1.5-9.5"/></svg></div>
-        <h3>Amigos del ambiente</h3>
-        <p>Usamos maderas de reforestación para construir nuestros insumos.</p>
-      </article>
-      <article class="why reveal">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.2-4.5A9 9 0 1 1 21 12z"/></svg></div>
-        <h3>Trato directo</h3>
-        <p>Un equipo altamente capacitado, con años de experiencia, te responde por WhatsApp.</p>
-      </article>
+    <div class="values-grid">
+      <article class="value reveal"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2l8.5 5v10L12 22l-8.5-5V7z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div><h3>Honestidad</h3><p>Miel pura y trato claro con cada cliente, desde el primer frasco.</p></article>
+      <article class="value reveal"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></div><h3>Resiliencia</h3><p>Veinte años de aprendizajes. Cada dificultad nos hizo una empresa más sólida.</p></article>
+      <article class="value reveal"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg></div><h3>Convicción y fe</h3><p>Creemos en la apicultura paraguaya y en el trabajo bien hecho.</p></article>
+      <article class="value reveal"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9.5" r="2.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M15 20a5 5 0 0 1 6.5-4.7"/></svg></div><h3>Trabajo en equipo</h3><p>Diez personas fijas y el apoyo de temporada en cada cosecha.</p></article>
     </div>
-  </div>
-</section>
-
-<!-- ================= SHOP ================= -->
-<section class="sec shop" id="apicultores">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Tienda para apicultores</span>
-      <h2>Todo lo que tu apiario necesita, <span class="gold-text">en un solo lugar.</span></h2>
-      <p>Materiales e insumos probados en nuestras propias colmenas. Consultá stock y precio al instante.</p>
-    </div>
-    <div class="shop-grid">
-      <article class="tilt reveal">
-        <div class="art"><svg viewBox="0 0 120 120"><defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd56b"/><stop offset="1" stop-color="#d06a00"/></linearGradient></defs><rect x="22" y="14" width="76" height="92" rx="6" fill="#8a5a2b"/><rect x="30" y="22" width="60" height="76" fill="url(#g1)"/><g fill="none" stroke="#a65a00" stroke-width="1.6"><path d="M38 30l6-4 6 4v7l-6 4-6-4zM50 30l6-4 6 4v7l-6 4-6-4zM62 30l6-4 6 4v7l-6 4-6-4zM74 30l6-4 6 4v7l-6 4-6-4zM44 41l6-4 6 4v7l-6 4-6-4zM56 41l6-4 6 4v7l-6 4-6-4zM68 41l6-4 6 4v7l-6 4-6-4zM38 52l6-4 6 4v7l-6 4-6-4zM50 52l6-4 6 4v7l-6 4-6-4zM62 52l6-4 6 4v7l-6 4-6-4zM74 52l6-4 6 4v7l-6 4-6-4zM44 63l6-4 6 4v7l-6 4-6-4zM56 63l6-4 6 4v7l-6 4-6-4zM68 63l6-4 6 4v7l-6 4-6-4zM38 74l6-4 6 4v7l-6 4-6-4zM50 74l6-4 6 4v7l-6 4-6-4zM62 74l6-4 6 4v7l-6 4-6-4zM74 74l6-4 6 4v7l-6 4-6-4z"/></g><rect x="16" y="10" width="88" height="8" rx="3" fill="#6b4220"/></svg></div>
-        <h3>Cuadros para colmenas</h3>
-        <p>Cuadros listos para trabajar, firmes y a medida de tu colmena.</p>
-        <a class="link" data-wa="¡Hola Don Carlos! Quiero consultar precio y stock de cuadros para colmenas." href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Consultar precio</a>
-      </article>
-      <article class="tilt reveal">
-        <div class="art"><svg viewBox="0 0 120 120"><defs><linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5b3a1a"/><stop offset="1" stop-color="#2e1a08"/></linearGradient><linearGradient id="g2b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe7a8"/><stop offset="1" stop-color="#ffb81c"/></linearGradient></defs><ellipse cx="60" cy="100" rx="40" ry="6" fill="#000" opacity=".35"/><path d="M45 28h30v10c10 4 16 14 16 26v26a8 8 0 0 1-8 8H37a8 8 0 0 1-8-8V64c0-12 6-22 16-26z" fill="url(#g2)"/><path d="M38 64h44v24a4 4 0 0 1-4 4H42a4 4 0 0 1-4-4z" fill="url(#g2b)" opacity=".9"/><rect x="42" y="18" width="36" height="12" rx="3" fill="#ffb81c"/><text x="60" y="82" text-anchor="middle" font-family="Georgia" font-weight="700" font-size="11" fill="#5b2a00">PROPÓLEO</text></svg></div>
-        <h3>Extracto de propóleo</h3>
-        <p>Directo de nuestras colmenas. Ideal para tu botiquín natural o para revender.</p>
-        <a class="link" data-wa="¡Hola Don Carlos! Quiero consultar por el extracto de propóleo." href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Consultar precio</a>
-      </article>
-      <article class="tilt reveal">
-        <div class="art"><svg viewBox="0 0 120 120"><defs><linearGradient id="g3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e7d3b0"/><stop offset="1" stop-color="#b8996a"/></linearGradient></defs><ellipse cx="60" cy="98" rx="42" ry="7" fill="#000" opacity=".35"/><path d="M18 50h84v38a8 8 0 0 1-8 8H26a8 8 0 0 1-8-8z" fill="url(#g3)"/><path d="M24 56h72v18H24z" fill="#ffb81c"/><path d="M24 56h72v4H24z" fill="#fff" opacity=".35"/><rect x="14" y="42" width="92" height="10" rx="3" fill="#8a6a3e"/><g fill="#2a1500"><ellipse cx="46" cy="34" rx="5" ry="3.5"/><ellipse cx="74" cy="28" rx="5" ry="3.5"/></g><g fill="#fff" opacity=".7"><ellipse cx="44" cy="30" rx="4" ry="2" transform="rotate(-25 44 30)"/><ellipse cx="72" cy="24" rx="4" ry="2" transform="rotate(-25 72 24)"/></g></svg></div>
-        <h3>Alimentadores</h3>
-        <p>Para sostener tus colmenas en épocas sin floración y proteger tu producción.</p>
-        <a class="link" data-wa="¡Hola Don Carlos! Quiero consultar por alimentadores para colmenas." href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Consultar precio</a>
-      </article>
-      <article class="tilt reveal">
-        <div class="art"><svg viewBox="0 0 120 120"><defs><radialGradient id="g4" cx=".4" cy=".35"><stop offset="0" stop-color="#ffe29a"/><stop offset="1" stop-color="#d06a00"/></radialGradient></defs><ellipse cx="60" cy="100" rx="34" ry="6" fill="#000" opacity=".35"/><ellipse cx="44" cy="44" rx="20" ry="12" fill="#fff4dc" opacity=".8" transform="rotate(-25 44 44)"/><ellipse cx="78" cy="44" rx="20" ry="12" fill="#fff4dc" opacity=".8" transform="rotate(25 78 44)"/><ellipse cx="60" cy="68" rx="16" ry="28" fill="url(#g4)"/><path d="M45 62h30M45 74h30M48 86h24" stroke="#2a1500" stroke-width="5"/><circle cx="60" cy="38" r="10" fill="#2a1500"/><path d="M56 30l-6-10M64 30l6-10" stroke="#2a1500" stroke-width="2" stroke-linecap="round"/><path d="M48 16l-4 -4M72 16l4-4" stroke="#ffb81c" stroke-width="3" stroke-linecap="round"/><path d="M60 8l-6 4 2-6-5-4h6l3-6 3 6h6l-5 4 2 6z" fill="#ffd56b"/></svg></div>
-        <h3>Reinas y material vivo</h3>
-        <p>Material vivo y mejoramiento genético por inseminación instrumental, para colmenas más fuertes.</p>
-        <a class="link" data-wa="¡Hola Don Carlos! Quiero consultar disponibilidad de reinas y material vivo." href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Consultar disponibilidad</a>
-      </article>
-      <article class="tilt reveal">
-        <div class="art"><svg viewBox="0 0 120 120"><defs><linearGradient id="g5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff0b8"/><stop offset="1" stop-color="#e8a10f"/></linearGradient></defs><ellipse cx="60" cy="100" rx="40" ry="6" fill="#000" opacity=".35"/><path d="M20 44l40-18 40 18v42L60 104 20 86z" fill="url(#g5)"/><path d="M20 44l40 18 40-18M60 62v42" fill="none" stroke="#c07a00" stroke-width="2"/><path d="M20 44l40-18 40 18-40 18z" fill="#fff6d0" opacity=".6"/><text x="38" y="84" font-family="Georgia" font-weight="700" font-size="11" fill="#7a4200" transform="rotate(24 38 84)">CERA</text></svg></div>
-        <h3>Cera de abejas</h3>
-        <p>Procesamos cera para apicultores. Consultá por el servicio y por cera disponible.</p>
-        <a class="link" data-wa="¡Hola Don Carlos! Quiero consultar por cera de abejas y el procesamiento de cera." href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Consultar</a>
-      </article>
-      <article class="tilt reveal">
-        <div class="art"><svg viewBox="0 0 120 120"><ellipse cx="60" cy="102" rx="44" ry="6" fill="#000" opacity=".35"/><rect x="18" y="60" width="84" height="40" rx="4" fill="#d9a441"/><rect x="18" y="60" width="84" height="6" fill="#fff" opacity=".25"/><rect x="18" y="34" width="84" height="26" rx="3" fill="#c2892c"/><rect x="12" y="24" width="96" height="12" rx="3" fill="#8a5a2b"/><rect x="40" y="88" width="40" height="6" rx="3" fill="#2a1500"/><path d="M30 76h60" stroke="#a66f1c" stroke-width="2"/><g fill="#2a1500"><ellipse cx="88" cy="14" rx="5" ry="3.5"/></g><ellipse cx="86" cy="10" rx="4" ry="2" fill="#fff" opacity=".7" transform="rotate(-25 86 10)"/></svg></div>
-        <h3>Y mucho más</h3>
-        <p>Más de 20 productos para el apicultor. Contanos qué necesitás y te armamos el pedido.</p>
-        <a class="link" data-wa="¡Hola Don Carlos! Necesito materiales apícolas. ¿Me pasan la lista de productos y precios?" href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Pedir lista completa</a>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SERVICES ================= -->
-<section class="sec">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Servicios</span>
-      <h2>Apicultura profesional, <span class="gold-text">de verdad.</span></h2>
-      <p>Si querés vivir de las abejas, te acompañamos en cada etapa.</p>
-    </div>
-    <div class="serv-grid">
-      <div class="serv reveal"><div class="num">01</div><div><h3>Envasado y sachetado de miel</h3><p>Envasamos tu miel en frascos o sachets con presentación cuidada, lista para vender.</p></div></div>
-      <div class="serv reveal"><div class="num">02</div><div><h3>Material vivo y genética</h3><p>Producción de material vivo y mejoramiento genético por inseminación instrumental.</p></div></div>
-      <div class="serv reveal"><div class="num">03</div><div><h3>Procesamiento de cera</h3><p>Procesamos cera de abeja para que vuelva a trabajar en tu apiario.</p></div></div>
-      <div class="serv reveal"><div class="num">04</div><div><h3>Elaboración de proyectos</h3><p>Te asesoramos para planificar y hacer crecer tu emprendimiento apícola.</p></div></div>
-    </div>
-    <div class="reveal" style="margin-top:44px">
-      <a class="btn btn-wa" data-wa="¡Hola Don Carlos! Quiero consultar por sus servicios para apicultores." href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Consultar un servicio</a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= COURSE ================= -->
-<section class="sec course" id="cursos">
-  <div class="wrap">
-    <div class="course-card reveal">
-      <div>
-        <span class="eyebrow">Capacitación</span>
-        <h2>Curso de manejo de colmenas de <span class="gold-text">alta producción</span></h2>
-        <p>Aprendé de quienes trabajan con abejas todos los días. Ya sea que estés empezando o que quieras multiplicar tu cosecha, te enseñamos lo que funciona en el campo.</p>
-        <ul class="ticks">
-          <li>Cursos en todos los niveles: desde iniciar tu primer apiario</li>
-          <li>Manejo para aumentar la producción de miel</li>
-          <li>Alimentación y cuidado de las colmenas en cada estación</li>
-          <li>Enseñado por apicultores con más de 20 años de experiencia</li>
-        </ul>
-        <a class="btn btn-gold" data-wa="¡Hola Don Carlos! Quiero información sobre el curso de manejo de colmenas de alta producción: próxima fecha, costo y cómo inscribirme." href="https://wa.me/595984399696">
-          <svg><use href="#i-wa"/></svg> Quiero reservar mi lugar
-        </a>
-      </div>
-      <div class="cube-scene" aria-hidden="true">
-        <div>
-          <div class="hexprism">
-            <div class="face">Manejo</div><div class="face">Cosecha</div><div class="face">Reinas</div>
-            <div class="face">Sanidad</div><div class="face">Apiario</div><div class="face">Miel</div>
-            <div class="cap top"></div><div class="cap bot"></div>
-          </div>
-          <div class="prism-shadow"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= STORY ================= -->
-<section class="sec" id="historia">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Nuestra historia</span>
-      <h2>Más de 20 años <span class="gold-text">entre abejas.</span></h2>
-    </div>
-    <div class="timeline">
-      <div class="tl reveal"><span class="dot"></span><div class="year">2004</div><h3>Nace la familia apicultora</h3><p>Empezamos como empresa familiar con 50 colmenas para producir miel premium en los palmares del Bajo Chaco.</p></div>
-      <div class="tl reveal"><span class="dot"></span><div class="year">2011</div><h3>Apicultura Don Carlos</h3><p>Nace Apicultura Don Carlos: servicios que facilitan e impulsan la apicultura profesional en Paraguay.</p></div>
-      <div class="tl reveal"><span class="dot"></span><div class="year">Hoy</div><h3>Miel, insumos y formación</h3><p>Desde Asunción abastecemos a familias y apicultores, de la mano de la Unión Paraguaya de Apicultores (UPA).</p></div>
-    </div>
+    <blockquote class="quote reveal">El camino de un emprendedor que comienza desde cero no suele ser corto ni rápido. Cuando se trabaja con organización, convicción y fe, cada dificultad puede convertirse en aprendizaje.<cite>Familia Don Carlos</cite></blockquote>
   </div>
 </section>
 
@@ -649,7 +612,7 @@ footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;
     </div>
     <div class="steps">
       <div class="step reveal"><h3>Escribinos</h3><p>Tocá cualquier botón verde y se abre WhatsApp con el mensaje listo.</p></div>
-      <div class="step reveal"><h3>Elegí</h3><p>Te pasamos variedades, presentaciones y precios actualizados.</p></div>
+      <div class="step reveal"><h3>Elegí</h3><p>Te pasamos productos, presentaciones y precios actualizados.</p></div>
       <div class="step reveal"><h3>Recibí o retirá</h3><p>Coordinamos la entrega o retirás en nuestro local de Asunción.</p></div>
     </div>
   </div>
@@ -663,26 +626,26 @@ footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;
       <h2>¿Tenés dudas?</h2>
     </div>
     <div class="faq reveal">
-      <details open><summary>¿La miel es pura?</summary><p>Sí. Es miel de nuestras propias colmenas, sin mezclas ni aditivos. Sabemos de dónde sale cada frasco porque lo producimos nosotros.</p></details>
+      <details open><summary>¿La miel es pura?</summary><p>Sí. Es miel de abejas pura, sin aditivos, de nuestras colmenas del Chaco paraguayo. Hace 20 años que trabajamos con abejas.</p></details>
       <details><summary>¿Cómo hago mi pedido?</summary><p>Por WhatsApp. Tocá cualquier botón de esta página, contanos qué necesitás y te respondemos con precios y disponibilidad.</p></details>
-      <details><summary>¿Dónde están ubicados?</summary><p>En Lilio 2955 c/ Consejal Vargas, Asunción, Paraguay. Escribinos antes de venir y te esperamos.</p></details>
+      <details><summary>¿Dónde puedo comprar?</summary><p>En nuestro local de Lilio 2955 c/ Consejal Vargas, Asunción; en supermercados y puntos de venta; y directo por WhatsApp.</p></details>
       <details><summary>¿Hacen entregas?</summary><p>Escribinos por WhatsApp con tu zona y te contamos las opciones de entrega disponibles.</p></details>
-      <details><summary>¿Venden por mayor o para revender?</summary><p>Sí, consultanos por WhatsApp las condiciones para pedidos grandes, comercios y revendedores.</p></details>
-      <details><summary>¿El curso sirve si nunca tuve colmenas?</summary><p>Escribinos y te contamos el contenido, la próxima fecha y si es el nivel adecuado para vos.</p></details>
+      <details><summary>¿Venden a empresas?</summary><p>Sí. Atendemos supermercados, confiterías, restaurantes y fábricas de alimentos. Escribinos por WhatsApp y te pasamos condiciones y lista de precios.</p></details>
+      <details><summary>¿Cuántos productos tienen?</summary><p>Cerca de 30 artículos y presentaciones en las líneas Clásica, Especialidades, Gourmet, Apisana y Bienestar. Pedí el catálogo completo por WhatsApp.</p></details>
     </div>
   </div>
 </section>
 
 <!-- ================= FINAL CTA ================= -->
-<section class="final">
+<section class="final" id="contacto">
   <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="dripG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e07b00"/><stop offset="1" stop-color="#ffb81c"/></linearGradient></defs><path fill="url(#dripG)" d="M0 0h1440v38c-40 0-52 18-60 44-8 26-34 26-40 0-8-30-26-44-70-44-60 0-70 20-120 20s-60-20-130-20c-40 0-48 30-54 60-6 30-34 30-38 0-5-36-20-60-80-60-70 0-90 26-150 26S600 38 540 38c-36 0-46 14-52 40-6 24-30 24-34 0-6-30-20-40-62-40-60 0-78 22-140 22S170 38 110 38C60 38 52 60 46 84c-6 24-28 22-32-2C10 56 6 38 0 38z"/></svg>
   <span class="drop" style="left:21%;top:40px;animation-delay:.2s"></span>
   <span class="drop" style="left:46%;top:60px;animation-delay:1.4s"></span>
   <span class="drop" style="left:79%;top:52px;animation-delay:2.3s"></span>
   <div class="wrap reveal">
-    <span class="eyebrow">Hoy mismo</span>
-    <h2>Probá la diferencia de la <span class="gold-text">miel de verdad.</span></h2>
-    <p>Un mensaje y listo. Te respondemos personalmente con variedades, precios y opciones de entrega.</p>
+    <span class="eyebrow">Desde 2006</span>
+    <h2>20 años de miel paraguaya, <span class="gold-text">a un mensaje.</span></h2>
+    <p>Escribinos y te respondemos personalmente con productos, precios y opciones de entrega.</p>
     <a class="btn btn-wa" data-wa="¡Hola Don Carlos! Vi su página y quiero hacer un pedido." href="https://wa.me/595984399696">
       <svg><use href="#i-wa"/></svg> Hacer mi pedido por WhatsApp
     </a>
@@ -694,8 +657,8 @@ footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;
 <footer>
   <div class="wrap">
     <div>
-      <div class="brand" style="margin-bottom:16px"><span class="brand-hex"><svg viewBox="0 0 24 24" fill="#2a1500"><ellipse cx="12" cy="13.5" rx="4.2" ry="6"/></svg></span><span>Apicultura Don Carlos</span></div>
-      <p>Empresa familiar dedicada a la apicultura desde 2004. Miel, materiales apícolas, servicios y capacitación.</p>
+      <div class="brand" style="margin-bottom:16px"><span class="brand-hex"><svg viewBox="0 0 24 24" fill="#2a1500"><ellipse cx="12" cy="13.5" rx="4.2" ry="6"/></svg></span><span>Miel Don Carlos</span></div>
+      <p>Empresa familiar paraguaya desde 2006. Cerca de 1.000 colmenas en Pozo Colorado, Chaco, y local en Asunción.</p>
     </div>
     <div>
       <h4>Contacto</h4>
@@ -707,7 +670,7 @@ footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;
       <h4>Local</h4>
       <p>Lilio 2955 c/ Consejal Vargas<br>Asunción · Paraguay</p>
     </div>
-    <div class="copy">© <span id="yr"></span> Apicultura Don Carlos. Todos los derechos reservados.</div>
+    <div class="copy">© <span id="yr"></span> Miel Don Carlos. Todos los derechos reservados.</div>
   </div>
 </footer>
 
@@ -744,24 +707,6 @@ footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;
     });
   }, {threshold:.15});
   document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
-
-  // Tarjetas con inclinación 3D
-  var fine = matchMedia('(pointer:fine)').matches;
-  document.querySelectorAll('.tilt').forEach(function(el){
-    if(!fine) return;
-    el.addEventListener('pointermove', function(e){
-      var r = el.getBoundingClientRect();
-      var x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
-      el.style.transition = 'transform .08s linear,border-color .3s,box-shadow .3s';
-      el.style.transform = 'perspective(900px) rotateX(' + ((.5 - y) * 14) + 'deg) rotateY(' + ((x - .5) * 16) + 'deg) translateY(-6px)';
-      el.style.setProperty('--mx', x * 100 + '%');
-      el.style.setProperty('--my', y * 100 + '%');
-    });
-    el.addEventListener('pointerleave', function(){
-      el.style.transition = '';
-      el.style.transform = '';
-    });
-  });
 
   // Carrusel 3D de productos
   var cf = document.getElementById('cf');

@@ -1,20 +1,27 @@
 # Miel Don Carlos — página de vendas
 
-Landing page de vendas da **Apicultura Don Carlos** (Asunción, Paraguai), com
-elementos 3D e todas as chamadas para ação indo para o WhatsApp do cliente.
+Landing page de vendas da **Miel Don Carlos** (Asunción, Paraguai), empresa
+familiar desde 2006, com elementos 3D e todas as chamadas para ação indo para o
+WhatsApp do cliente. Os dados da trajetória vêm do material "Historia de Miel
+Don Carlos" enviado pelo cliente.
 
 ```
 index.html   página completa (HTML, CSS e JS num arquivo só)
 img/         fotos dos produtos usadas no carrossel
+img/historia fotos da trajetória (extraídas do PDF do cliente)
 ```
 
 ## O que tem na página
 
 - **Topo 3D (Three.js):** favo de mel interativo, com as células subindo sob o
   mouse e abelhas 3D voando em volta.
-- **Carrossel 3D de produtos:** Línea Clásica, Gourmet, Medicinal, Apisana,
-  sachet e propóleo, cada um com botão de pedido no WhatsApp.
-- Loja para apicultores, serviços, curso, história, como pedir, FAQ e CTA final.
+- **Origem:** a marca leva o nome do pai dos fundadores (2006, 50 colmeias).
+- **Carrossel 3D de produtos:** Apisana (o mais vendido), Clásica, Gourmet,
+  Especialidades, Bienestar, sachet e propóleo, cada um com pedido no WhatsApp.
+- **Trajetória 2006 → hoje** em linha do tempo com fotos reais.
+- **Hoje em números:** ≈1.000 colmeias em Pozo Colorado, ≈30 produtos, 10 pessoas.
+- **Para empresas:** supermercados, confeitarias, restaurantes e indústrias.
+- Valores, como pedir, FAQ e CTA final.
 - Botão flutuante do WhatsApp.
 
 ## WhatsApp
