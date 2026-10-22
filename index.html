@@ -8,305 +8,301 @@
 <meta property="og:title" content="Miel Don Carlos · 20 años de miel paraguaya">
 <meta property="og:description" content="Desde 2006, miel paraguaya de nuestras colmenas del Chaco. Pedí por WhatsApp.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#0c0905">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,4 90,27 90,73 50,96 10,73 10,27' fill='%23ffb81c'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#100E0B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23100E0B'/%3E%3Cg fill='%23F3DF12'%3E%3Cellipse cx='32' cy='14' rx='11' ry='2.6'/%3E%3Cellipse cx='32' cy='21.5' rx='16' ry='3'/%3E%3Cellipse cx='32' cy='29.5' rx='19' ry='3'/%3E%3Cellipse cx='32' cy='37.5' rx='19' ry='3'/%3E%3Cellipse cx='32' cy='45.5' rx='16' ry='3'/%3E%3Cellipse cx='32' cy='53' rx='11' ry='2.6'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
+/* =========================================================
+   Identidad Miel Don Carlos
+   Amarillo CMYK 6/0/100/0 · Dorado CMYK 0/20/60/20
+   Verde P375C · Naranja P1655C · Azul P306C · Coral P1785C
+   ========================================================= */
 :root{
-  --bg:#0c0905;
-  --bg2:#14100a;
-  --panel:#1f1409;
-  --panel2:#2a1a0b;
-  --gold:#ffb81c;
-  --gold2:#ffd56b;
-  --amber:#e07b00;
-  --cream:#fff4dc;
-  --muted:#cdb38b;
-  --line:rgba(255,196,90,.16);
+  --yellow:#F3DF12;
+  --gold:#CCA352;
+  --gold-dark:#8C6A26;
+  --green:#97D700;
+  --orange:#FC4C02;
+  --orange-dark:#C23A00;
+  --blue:#00B5E2;
+  --coral:#F8485E;
+
+  --ink:#100E0B;
+  --ink2:#18150F;
+  --panel:#1F1B14;
+  --cream:#FBF6EA;
+  --muted:#BDB29C;
+  --line:rgba(204,163,82,.22);
+
+  --beige:#F5EEDF;
+  --beige2:#EBDFC6;
+  --text-dark:#241C11;
+  --muted-dark:#6A5A40;
+  --line-dark:rgba(140,106,38,.22);
+
   --wa:#25d366;
-  --wa-dark:#128c4a;
-  --radius:22px;
+  --radius:20px;
   --maxw:1180px;
   color-scheme:dark;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;overflow-x:hidden}
 body{
-  background:var(--bg);
-  color:var(--cream);
-  font-family:"Manrope",system-ui,sans-serif;
-  font-size:17px;
-  line-height:1.6;
-  overflow-x:hidden;
-  overflow-x:clip;
-  -webkit-font-smoothing:antialiased;
+  background:var(--ink);color:var(--cream);
+  font-family:"Poppins",system-ui,sans-serif;font-size:17px;font-weight:400;line-height:1.65;
+  overflow-x:hidden;overflow-x:clip;-webkit-font-smoothing:antialiased;
 }
-img,svg,canvas{display:block}
+img,svg{display:block}
 a{color:inherit;text-decoration:none}
-h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:700;line-height:1.05;letter-spacing:-.02em}
+h1,h2,h3{font-family:"Poppins",system-ui,sans-serif;font-weight:700;line-height:1.12;letter-spacing:-.025em}
+strong,b{font-weight:600}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
-.eyebrow{
-  display:inline-flex;align-items:center;gap:10px;
-  font-size:13px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);
-}
-.eyebrow::before{content:"";width:12px;height:14px;background:var(--gold);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
-.gold-text{
-  background:linear-gradient(100deg,#ffe29a 0%,#ffb81c 35%,#ff8a00 60%,#ffd56b 100%);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-}
 
-/* ---------- Buttons ---------- */
-.btn{
-  position:relative;display:inline-flex;align-items:center;justify-content:center;gap:12px;
-  padding:18px 30px;border-radius:999px;font-weight:800;font-size:17px;letter-spacing:.01em;
-  transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,background .25s;
-  cursor:pointer;border:0;white-space:nowrap;
-}
+/* Sol rayado del logo como motivo gráfico */
+.sun-dot{display:inline-block;width:14px;height:14px;border-radius:50%;flex:none;
+  background:repeating-linear-gradient(180deg,currentColor 0 2px,transparent 2px 3.6px)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--yellow)}
+.eyebrow::before{content:"";width:14px;height:14px;border-radius:50%;background:repeating-linear-gradient(180deg,currentColor 0 2px,transparent 2px 3.6px)}
+.eyebrow.natural{color:var(--green)}
+.hl{color:var(--yellow)}
+
+/* ---------- Botones ---------- */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:12px;
+  padding:17px 30px;border-radius:999px;font-weight:600;font-size:18px;letter-spacing:.005em;
+  transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer;border:0;white-space:nowrap}
 .btn svg{width:22px;height:22px;flex:none}
-.btn-wa{
-  background:linear-gradient(180deg,#2ee877,#1fb85a);color:#04210f;
-  box-shadow:0 10px 0 #0e7a3c,0 18px 40px rgba(37,211,102,.35),inset 0 1px 0 rgba(255,255,255,.5);
-  transform:translateY(-4px);
-}
-.btn-wa:hover{transform:translateY(-7px);box-shadow:0 13px 0 #0e7a3c,0 26px 50px rgba(37,211,102,.45),inset 0 1px 0 rgba(255,255,255,.5)}
-.btn-wa:active{transform:translateY(4px);box-shadow:0 2px 0 #0e7a3c,0 8px 20px rgba(37,211,102,.3)}
-.btn-ghost{background:rgba(255,196,90,.08);color:var(--cream);border:1px solid var(--line)}
-.btn-ghost:hover{background:rgba(255,196,90,.16);transform:translateY(-2px)}
-.btn-gold{
-  background:linear-gradient(180deg,#ffd56b,#ffaa00);color:#2a1500;
-  box-shadow:0 10px 0 #a65a00,0 18px 40px rgba(255,170,0,.3),inset 0 1px 0 rgba(255,255,255,.6);
-  transform:translateY(-4px);
-}
-.btn-gold:hover{transform:translateY(-7px);box-shadow:0 13px 0 #a65a00,0 26px 50px rgba(255,170,0,.4)}
-.btn-gold:active{transform:translateY(4px);box-shadow:0 2px 0 #a65a00}
+.btn-wa{background:var(--orange);color:#fff;box-shadow:0 5px 0 var(--orange-dark),0 16px 34px rgba(252,76,2,.28);transform:translateY(-3px)}
+.btn-wa:hover{transform:translateY(-5px);box-shadow:0 7px 0 var(--orange-dark),0 22px 40px rgba(252,76,2,.36)}
+.btn-wa:active{transform:translateY(2px);box-shadow:0 1px 0 var(--orange-dark)}
+.btn-yellow{background:var(--yellow);color:var(--text-dark);box-shadow:0 5px 0 #A99A00,0 16px 34px rgba(243,223,18,.2);transform:translateY(-3px)}
+.btn-yellow:hover{transform:translateY(-5px);box-shadow:0 7px 0 #A99A00,0 22px 40px rgba(243,223,18,.28)}
+.btn-yellow:active{transform:translateY(2px);box-shadow:0 1px 0 #A99A00}
+.btn-ghost{background:transparent;color:var(--cream);border:1.5px solid rgba(251,246,234,.28)}
+.btn-ghost:hover{border-color:var(--yellow);color:var(--yellow)}
+
+/* ---------- Logo ---------- */
+.logo{display:block;height:auto}
+.logo-dark{--logo-script:var(--text-dark);--logo-tag:var(--gold-dark)}
 
 /* ---------- Nav ---------- */
-.nav{
-  position:fixed;inset:0 0 auto 0;z-index:50;
-  transition:background .3s,backdrop-filter .3s,border-color .3s;
-  border-bottom:1px solid transparent;
-}
-.nav.scrolled{background:rgba(15,9,4,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
-.brand{display:flex;align-items:center;gap:12px;font-family:"Fraunces",serif;font-weight:700;font-size:20px;line-height:1}
-.brand small{display:block;font-family:"Manrope",sans-serif;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:4px}
-.brand-hex{width:38px;height:42px;background:linear-gradient(160deg,#ffd56b,#e07b00);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);display:grid;place-items:center}
-.brand-hex svg{width:22px;height:22px}
-.nav-links{display:flex;gap:28px;font-weight:600;font-size:15px;color:var(--muted)}
-.nav-links a:hover{color:var(--gold)}
-.nav .btn{padding:12px 20px;font-size:15px;transform:none;box-shadow:0 6px 18px rgba(37,211,102,.3)}
-.nav .btn:hover{transform:translateY(-2px)}
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+.nav.scrolled{background:rgba(16,14,11,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:84px;gap:20px}
+.nav .brand .logo{width:138px}
+.nav-links{display:flex;gap:30px;font-weight:500;font-size:15px;color:var(--muted)}
+.nav-links a:hover{color:var(--yellow)}
+.nav .btn{padding:11px 20px;font-size:15px;transform:none;box-shadow:none}
+.nav .btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(252,76,2,.3)}
 
-/* ---------- Hero ---------- */
-.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;overflow:hidden;isolation:isolate}
-.hero::before{
-  content:"";position:absolute;inset:0;z-index:-2;
-  background:
-    radial-gradient(60% 70% at 72% 45%,rgba(255,150,0,.22),transparent 70%),
-    radial-gradient(40% 40% at 10% 90%,rgba(255,184,28,.10),transparent 70%),
-    var(--bg);
-}
-#hero3d{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
-.hero .wrap{width:100%;padding-top:110px;padding-bottom:90px}
-.hero-copy{max-width:600px}
-.hero h1{font-size:clamp(46px,7vw,92px);margin:22px 0 24px;font-weight:900}
-.hero h1 em{font-style:italic;font-weight:500}
-.hero p.lead{font-size:clamp(18px,1.6vw,21px);color:var(--muted);max-width:520px;margin-bottom:38px}
+/* ---------- Héroe ---------- */
+.hero{position:relative;padding:150px 0 110px;overflow:hidden;
+  background:radial-gradient(55% 60% at 78% 45%,rgba(204,163,82,.16),transparent 70%),var(--ink)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(40px,5.4vw,72px);font-weight:800;margin:22px 0 22px;letter-spacing:-.035em}
+.hero p.lead{font-size:clamp(17px,1.5vw,20px);color:var(--muted);max-width:540px;margin-bottom:22px}
 .hero p.lead strong{color:var(--cream)}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:18px;align-items:center}
-.hero-trust{display:flex;flex-wrap:wrap;gap:26px;margin-top:46px;color:var(--muted);font-size:14px;font-weight:600}
+.pure{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;background:rgba(151,215,0,.1);border:1px solid rgba(151,215,0,.35);color:var(--green);font-size:14px;font-weight:600;margin-bottom:34px}
+.pure::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(151,215,0,.18)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.hero-trust{display:flex;flex-wrap:wrap;gap:30px;margin-top:44px;padding-top:28px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;line-height:1.4}
 .hero-trust div{display:flex;align-items:center;gap:10px}
-.hero-trust b{font-family:"Fraunces",serif;font-size:30px;color:var(--gold);font-weight:700;line-height:1}
-.hint3d{
-  position:absolute;right:24px;bottom:28px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
-  display:flex;align-items:center;gap:10px;opacity:.75
-}
-.hint3d span{width:28px;height:28px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;animation:bob 2.4s ease-in-out infinite}
-@keyframes bob{50%{transform:translateY(-5px)}}
+.hero-trust b{font-size:30px;font-weight:700;color:var(--yellow);line-height:1;letter-spacing:-.02em}
+.hero-art{position:relative;height:620px}
+.hero-art .sun{position:absolute;left:50%;top:0;width:440px;max-width:86%;transform:translateX(-50%);fill:var(--yellow)}
+.pcard{position:absolute;width:230px;border-radius:18px;overflow:hidden;background:#fff;padding:7px 7px 0;box-shadow:0 30px 60px rgba(0,0,0,.55);transition:transform .4s}
+.pcard img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px}
+.pcard span{display:flex;align-items:center;gap:8px;padding:10px 6px 12px;font-size:13px;font-weight:600;color:var(--text-dark)}
+.pcard span::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--c)}
+.pcard.c1{left:2%;top:44%;transform:rotate(-8deg);--c:var(--yellow)}
+.pcard.c2{left:50%;top:24%;margin-left:-115px;z-index:2;transform:rotate(1deg);--c:var(--orange)}
+.pcard.c3{right:0;top:48%;transform:rotate(7deg);--c:var(--coral)}
+.pcard:hover{transform:rotate(0) translateY(-8px);z-index:3}
 
 /* ---------- Ticker ---------- */
-.ticker-wrap{overflow:hidden;padding:24px 0;margin:-44px 0 -24px;position:relative;z-index:3}
-.ticker{background:linear-gradient(90deg,#ffb81c,#ff9500);color:#2a1500;overflow:hidden;transform:rotate(-1.6deg) scale(1.04);position:relative;box-shadow:0 20px 50px rgba(0,0,0,.4)}
-.ticker-track{display:flex;width:max-content;animation:tick 32s linear infinite}
-.ticker-track span{display:flex;align-items:center;gap:28px;padding:16px 14px;font-weight:800;font-size:17px;text-transform:uppercase;letter-spacing:.08em;white-space:nowrap}
-.ticker-track span::after{content:"";width:12px;height:14px;background:#2a1500;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+.ticker{background:var(--yellow);color:var(--text-dark);overflow:hidden}
+.ticker-track{display:flex;width:max-content;animation:tick 40s linear infinite}
+.ticker-track span{display:flex;align-items:center;gap:26px;padding:15px 13px;font-weight:600;font-size:15px;text-transform:uppercase;letter-spacing:.1em;white-space:nowrap}
+.ticker-track span::after{content:"";width:12px;height:12px;border-radius:50%;background:repeating-linear-gradient(180deg,var(--text-dark) 0 2px,transparent 2px 3.4px)}
 @keyframes tick{to{transform:translateX(-50%)}}
 
-/* ---------- Sections ---------- */
+/* ---------- Secciones ---------- */
 section{position:relative}
-.sec{padding:130px 0}
-.sec-head{max-width:720px;margin-bottom:60px}
-.sec-head h2{font-size:clamp(38px,5vw,64px);margin:18px 0 18px}
-.sec-head p{color:var(--muted);font-size:19px}
+.sec{padding:120px 0}
+.sec-head{max-width:740px;margin-bottom:56px}
+.sec-head h2{font-size:clamp(32px,4.2vw,52px);margin:16px 0 16px}
+.sec-head p{color:var(--muted);font-size:18px}
 .center{text-align:center;margin-left:auto;margin-right:auto}
-.reveal{opacity:0;transform:translateY(40px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
 .reveal.in{opacity:1;transform:none}
 
-/* ---------- Carrusel 3D de productos ---------- */
-.product{overflow:hidden;background:
-  radial-gradient(50% 55% at 50% 55%,rgba(255,150,0,.18),transparent 70%),
-  linear-gradient(180deg,var(--bg),var(--bg2));
-}
-.product .sec-head{margin-bottom:30px}
-.cf{position:relative;height:600px;perspective:1400px;outline:none;touch-action:pan-y;user-select:none;-webkit-user-select:none}
-#combs3d{position:absolute;inset:-60px 0;width:100%;height:calc(100% + 120px);pointer-events:none}
-.cf-track{position:absolute;inset:0;transform-style:preserve-3d}
-.cf-card{
-  position:absolute;left:50%;top:10px;width:330px;margin-left:-165px;
-  border-radius:26px;overflow:hidden;background:linear-gradient(180deg,#24170a,#150d05);
-  border:1px solid var(--line);box-shadow:0 40px 80px rgba(0,0,0,.55);
-  transition:transform .7s cubic-bezier(.2,.8,.2,1),opacity .7s,filter .7s,border-color .4s;
-  cursor:pointer;will-change:transform;
-}
-.cf-card.is-active{cursor:default;border-color:rgba(255,184,28,.55);box-shadow:0 40px 90px rgba(0,0,0,.6),0 0 70px rgba(255,160,0,.22)}
-.cf-badge{position:absolute;top:14px;left:14px;z-index:2;padding:6px 12px;border-radius:999px;background:var(--gold);color:#2a1500;font:800 12px "Manrope",sans-serif;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 8px 20px rgba(0,0,0,.4)}
-.cf-card img{display:block;width:100%;aspect-ratio:1;object-fit:cover;pointer-events:none}
-.cf-info{padding:20px 22px 24px}
-.cf-tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
-.cf-info h3{font-size:25px;margin-bottom:8px}
-.cf-info p{color:var(--muted);font-size:15px;line-height:1.5;min-height:45px;margin-bottom:18px}
-.cf-info .btn{width:100%;padding:14px 18px;font-size:15px;transform:translateY(-3px);box-shadow:0 6px 0 #0e7a3c,0 12px 26px rgba(37,211,102,.3)}
-.cf-info .btn:hover{transform:translateY(-5px)}
-.cf-card:not(.is-active) .cf-info .btn{pointer-events:none}
-.cf-nav{position:absolute;top:200px;z-index:30;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;
-  background:rgba(15,9,4,.75);border:1px solid var(--line);color:var(--gold);cursor:pointer;backdrop-filter:blur(8px);transition:background .2s,transform .2s}
-.cf-nav:hover{background:var(--gold);color:#2a1500;transform:scale(1.08)}
-.cf-nav svg{width:22px;height:22px}
-.cf-prev{left:max(16px,calc(50% - 470px))}
-.cf-prev svg{transform:rotate(180deg)}
-.cf-next{right:max(16px,calc(50% - 470px))}
-.cf-dots{display:flex;justify-content:center;gap:10px;margin-top:6px}
-.cf-dots button{width:12px;height:13px;border:0;padding:0;cursor:pointer;background:rgba(255,184,28,.25);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);transition:background .3s,transform .3s}
-.cf-dots button[aria-current="true"]{background:var(--gold);transform:scale(1.35)}
-.product-cta{text-align:center;margin-top:46px;padding:0 16px}
+/* Secciones claras: dorado/beige artesanal */
+.sec-light{background:var(--beige);color:var(--text-dark);color-scheme:light;--line:var(--line-dark)}
+.sec-light .eyebrow{color:var(--gold-dark)}
+.sec-light .eyebrow.natural{color:#4E7400}
+.sec-light .sec-head p,.sec-light p{color:var(--muted-dark)}
+.sec-light .hl{color:inherit;background:linear-gradient(transparent 60%,var(--yellow) 60%,var(--yellow) 92%,transparent 92%);padding:0 .08em}
+.sec-light .btn-ghost{color:var(--text-dark);border-color:rgba(36,28,17,.3)}
+.sec-light .btn-ghost:hover{border-color:var(--text-dark);color:var(--text-dark);background:rgba(36,28,17,.05)}
+.sec-beige2{background:var(--beige2)}
 
-/* ---------- Fotos ---------- */
-.photo{position:relative;margin:0;border-radius:24px;overflow:hidden;border:1px solid var(--line);box-shadow:0 40px 80px rgba(0,0,0,.5);background:var(--panel)}
+/* ---------- Fotos e íconos ---------- */
+.photo{position:relative;margin:0;border-radius:var(--radius);overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.35);background:var(--panel)}
+.sec-light .photo{box-shadow:0 26px 50px rgba(60,40,10,.22);border:6px solid #fff}
 .photo img{display:block;width:100%;height:100%;object-fit:cover}
-.photo figcaption{position:absolute;left:14px;bottom:14px;padding:6px 12px;border-radius:999px;background:rgba(12,9,5,.78);backdrop-filter:blur(6px);font-size:13px;font-weight:700;color:var(--gold2)}
-.ico{width:58px;height:64px;display:grid;place-items:center;margin-bottom:22px;background:linear-gradient(160deg,#ffd56b,#e07b00);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
-.ico svg{width:28px;height:28px;stroke:#2a1500;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.photo figcaption{position:absolute;left:14px;bottom:14px;padding:6px 12px;border-radius:999px;background:rgba(16,14,11,.8);backdrop-filter:blur(6px);font-size:13px;font-weight:500;color:var(--cream)}
+.ico{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;margin-bottom:20px;background:var(--yellow)}
+.ico svg{width:26px;height:26px;stroke:var(--text-dark);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
 /* ---------- Origen ---------- */
 .origin-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
 .origin .photo{aspect-ratio:16/10}
 .origin-media{position:relative}
-.origin-badge{position:absolute;right:-18px;top:-26px;width:132px;height:146px;display:grid;place-content:center;text-align:center;
-  background:linear-gradient(160deg,#ffd56b,#e07b00);color:#2a1500;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);filter:drop-shadow(0 20px 30px rgba(0,0,0,.5))}
-.origin-badge b{font:900 40px/1 "Fraunces",serif}
-.origin-badge span{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
-.origin h2{font-size:clamp(36px,4.4vw,58px);margin:18px 0 24px}
-.origin p{color:var(--muted);font-size:18px;margin-bottom:18px}
-.origin p strong{color:var(--cream)}
+.origin-badge{position:absolute;right:-20px;top:-30px;width:128px;height:128px;border-radius:50%;display:grid;place-content:center;text-align:center;
+  background:var(--yellow);color:var(--text-dark);box-shadow:0 18px 34px rgba(60,40,10,.3)}
+.origin-badge b{font-size:42px;font-weight:800;line-height:1;letter-spacing:-.03em}
+.origin-badge span{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
+.origin h2{font-size:clamp(32px,4vw,50px);margin:16px 0 22px}
+.origin p{font-size:18px;margin-bottom:16px}
+.origin p strong{color:var(--text-dark)}
 .origin .btn{margin-top:14px}
+
+/* ---------- Carrusel de productos ---------- */
+.product{overflow:hidden;background:radial-gradient(50% 55% at 50% 55%,rgba(204,163,82,.14),transparent 70%),var(--ink)}
+.product .sec-head{margin-bottom:30px}
+.cf{position:relative;height:610px;perspective:1400px;outline:none;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.cf-track{position:absolute;inset:0;transform-style:preserve-3d}
+.cf-card{position:absolute;left:50%;top:10px;width:330px;margin-left:-165px;border-radius:22px;overflow:hidden;
+  background:var(--panel);border:1px solid var(--line);border-top:6px solid var(--c,var(--yellow));box-shadow:0 40px 80px rgba(0,0,0,.55);
+  transition:transform .7s cubic-bezier(.2,.8,.2,1),opacity .7s,filter .7s;cursor:pointer;will-change:transform}
+.cf-card.is-active{cursor:default;box-shadow:0 40px 90px rgba(0,0,0,.6)}
+.cf-badge{position:absolute;top:14px;left:14px;z-index:2;padding:6px 12px;border-radius:999px;background:var(--orange);color:#fff;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 8px 20px rgba(0,0,0,.4)}
+.cf-card img{display:block;width:100%;aspect-ratio:1;object-fit:cover;pointer-events:none}
+.cf-info{padding:18px 22px 24px}
+.cf-tag{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--c,var(--yellow));margin-bottom:6px}
+.cf-tag::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.cf-info h3{font-size:22px;margin-bottom:8px}
+.cf-info p{color:var(--muted);font-size:15px;line-height:1.55;min-height:47px;margin-bottom:18px}
+.cf-info .btn{width:100%;padding:13px 18px;font-size:16px;transform:translateY(-3px)}
+.cf-card:not(.is-active) .cf-info .btn{pointer-events:none}
+.cf-nav{position:absolute;top:200px;z-index:30;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(16,14,11,.8);border:1px solid var(--line);color:var(--yellow);cursor:pointer;backdrop-filter:blur(8px);transition:background .2s,color .2s,transform .2s}
+.cf-nav:hover{background:var(--yellow);color:var(--text-dark);transform:scale(1.06)}
+.cf-nav svg{width:22px;height:22px}
+.cf-prev{left:max(16px,calc(50% - 470px))}
+.cf-prev svg{transform:rotate(180deg)}
+.cf-next{right:max(16px,calc(50% - 470px))}
+.cf-dots{display:flex;justify-content:center;gap:10px;margin-top:6px}
+.cf-dots button{width:10px;height:10px;border:0;padding:0;border-radius:50%;cursor:pointer;background:rgba(204,163,82,.35);transition:background .3s,transform .3s}
+.cf-dots button[aria-current="true"]{background:var(--yellow);transform:scale(1.4)}
+.product-cta{text-align:center;margin-top:46px;padding:0 16px}
+/* colores de cada línea, como en las etiquetas */
+.l-clasica{--c:var(--yellow)}
+.l-apisana{--c:var(--orange)}
+.l-gourmet{--c:var(--coral)}
+.l-especial{--c:var(--green)}
+.l-bienestar{--c:var(--blue)}
 
 /* ---------- Trayectoria ---------- */
 .journey{position:relative;max-width:1060px;margin:0 auto}
-.journey::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;margin-left:-1px;background:linear-gradient(transparent,var(--gold) 4%,var(--gold) 96%,transparent);opacity:.6}
+.journey::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;margin-left:-1px;background:linear-gradient(transparent,var(--gold) 4%,var(--gold) 96%,transparent)}
 .jstep{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center;margin-bottom:76px}
 .jstep:last-child{margin-bottom:0}
-.jstep::before{content:"";position:absolute;left:50%;top:50%;width:26px;height:29px;margin:-14px 0 0 -13px;background:var(--gold);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);box-shadow:0 0 0 6px var(--bg)}
+.jstep::before{content:"";position:absolute;left:50%;top:50%;width:24px;height:24px;margin:-12px 0 0 -12px;border-radius:50%;
+  background:repeating-linear-gradient(180deg,var(--text-dark) 0 3px,var(--yellow) 3px 6px);box-shadow:0 0 0 6px var(--beige),0 0 0 7px var(--gold)}
 .jtext{text-align:right}
 .jstep:nth-child(even) .jtext{grid-column:2;text-align:left}
 .jstep:nth-child(even) .jmedia{grid-column:1;grid-row:1}
-.jyear{font:900 54px/1 "Fraunces",serif;color:var(--gold)}
-.jtext h3{font-size:28px;margin:10px 0 10px}
-.jtext p{color:var(--muted);font-size:17px}
+.jyear{font-size:46px;font-weight:800;line-height:1;color:var(--gold-dark);letter-spacing:-.03em}
+.jtext h3{font-size:25px;margin:10px 0 10px}
+.jtext p{font-size:17px}
 .jmedia .photo{aspect-ratio:4/3}
-.jcard{padding:34px 32px;border-radius:24px;background:linear-gradient(160deg,#2a1a0b,#150d05);border:1px solid var(--line)}
-.jcard b{display:block;font:900 64px/1 "Fraunces",serif;color:var(--cream);margin-bottom:10px}
-.jcard span{color:var(--muted);font-size:16px}
+.jcard{padding:32px;border-radius:var(--radius);background:#fff;border:1px solid var(--line-dark);box-shadow:0 20px 40px rgba(60,40,10,.1)}
+.jcard b{display:block;font-size:56px;font-weight:800;line-height:1;color:var(--text-dark);margin-bottom:10px;letter-spacing:-.03em}
+.jcard span{color:var(--muted-dark);font-size:16px}
 
 /* ---------- Hoy ---------- */
-.today-hero{position:relative;border-radius:32px;overflow:hidden;min-height:540px;display:flex;align-items:flex-end;border:1px solid var(--line)}
+.today-hero{position:relative;border-radius:28px;overflow:hidden;min-height:540px;display:flex;align-items:flex-end}
 .today-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.today-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,9,5,.05) 25%,rgba(12,9,5,.93))}
+.today-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,14,11,.05) 25%,rgba(16,14,11,.93))}
 .today-hero .inner{position:relative;z-index:1;padding:52px;max-width:760px}
-.today-hero h2{font-size:clamp(40px,6vw,76px);margin:16px 0 14px}
-.today-hero p{font-size:19px;color:#e9dcc4}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:24px;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:var(--panel)}
-.stat{padding:32px 28px;border-right:1px solid var(--line)}
+.today-hero h2{font-size:clamp(38px,5.4vw,68px);font-weight:800;margin:14px 0 12px}
+.today-hero p{font-size:18px;color:#E9E1CF}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:24px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--panel)}
+.stat{padding:30px 28px;border-right:1px solid var(--line)}
 .stat:last-child{border-right:0}
-.stat b{display:block;font:900 50px/1 "Fraunces",serif;color:var(--gold);margin-bottom:10px}
+.stat b{display:block;font-size:44px;font-weight:700;line-height:1;color:var(--yellow);margin-bottom:10px;letter-spacing:-.03em}
 .stat span{color:var(--muted);font-size:15px}
-.lines{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:30px;color:var(--muted);font-weight:700}
-.lines span.l{padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:rgba(255,184,28,.06);color:var(--gold2)}
+.lines{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:30px;color:var(--muted);font-weight:500}
+.lines span.l{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;border:1px solid var(--line);color:var(--cream);font-weight:500}
+.lines span.l::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--c)}
 
 /* ---------- Empresas ---------- */
-.b2b{background:var(--bg2)}
 .b2b-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.b2b h2{font-size:clamp(32px,4vw,50px);margin:16px 0 16px}
 .b2b .photo{aspect-ratio:16/10}
 .b2b-list{list-style:none;display:grid;gap:12px;margin:28px 0 36px}
-.b2b-list li{display:flex;gap:16px;align-items:center;padding:16px 20px;border-radius:16px;background:rgba(255,184,28,.05);border:1px solid var(--line);font-weight:700}
-.b2b-list li::before{content:"";flex:none;width:20px;height:22px;background:var(--gold);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+.b2b-list li{display:flex;gap:14px;align-items:center;padding:15px 20px;border-radius:14px;background:#fff;border:1px solid var(--line-dark);font-weight:500;color:var(--text-dark)}
+.b2b-list li::before{content:"";flex:none;width:22px;height:22px;border-radius:50%;
+  background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%23241C11' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
 
 /* ---------- Valores ---------- */
 .values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.value{padding:32px 26px;border-radius:22px;background:linear-gradient(180deg,var(--panel),#120b05);border:1px solid var(--line)}
-.value h3{font-size:24px;margin-bottom:10px}
-.value p{color:var(--muted);font-size:16px}
-.quote{margin:80px auto 0;max-width:920px;text-align:center;font:italic 500 clamp(24px,3vw,36px)/1.35 "Fraunces",serif;color:var(--cream)}
-.quote::before{content:"“";display:block;font-size:90px;line-height:.6;color:var(--gold);margin-bottom:10px}
-.quote cite{display:block;margin-top:22px;font:800 13px "Manrope",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-style:normal}
+.value{padding:30px 26px;border-radius:var(--radius);background:var(--panel);border:1px solid var(--line)}
+.value h3{font-size:21px;margin-bottom:8px}
+.value p{color:var(--muted);font-size:15.5px}
+.quote{margin:80px auto 0;max-width:900px;text-align:center;font-size:clamp(22px,2.6vw,32px);font-weight:500;line-height:1.45;letter-spacing:-.01em;color:var(--cream)}
+.quote::before{content:"“";display:block;font-size:90px;font-weight:700;line-height:.7;color:var(--yellow);margin-bottom:6px}
+.quote cite{display:block;margin-top:22px;font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-style:normal}
 
-/* ---------- Steps ---------- */
+/* ---------- Pasos ---------- */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:s}
-.step{padding:36px 30px;border-radius:var(--radius);background:var(--panel);border:1px solid var(--line);position:relative}
-.step::before{counter-increment:s;content:counter(s);position:absolute;top:-22px;left:30px;width:44px;height:48px;display:grid;place-items:center;
-  background:var(--gold);color:#2a1500;font:900 22px "Fraunces",serif;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
-.step h3{font-size:23px;margin:12px 0 8px}
-.step p{color:var(--muted);font-size:16px}
+.step{padding:38px 30px 32px;border-radius:var(--radius);background:#fff;border:1px solid var(--line-dark);position:relative}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:-22px;left:30px;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;
+  background:var(--yellow);color:var(--text-dark);font-size:20px;font-weight:700}
+.step h3{font-size:21px;margin:8px 0 8px;color:var(--text-dark)}
+.step p{font-size:16px}
 
 /* ---------- FAQ ---------- */
 .faq{max-width:820px;margin:0 auto}
 .faq details{border-bottom:1px solid var(--line)}
-.faq summary{list-style:none;cursor:pointer;padding:26px 0;display:flex;justify-content:space-between;gap:20px;align-items:center;font-family:"Fraunces",serif;font-size:23px;font-weight:600}
+.faq summary{list-style:none;cursor:pointer;padding:24px 0;display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:19px;font-weight:600}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";flex:none;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-family:"Manrope";color:var(--gold);transition:transform .3s}
+.faq summary::after{content:"+";flex:none;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--yellow);font-weight:500;transition:transform .3s}
 .faq details[open] summary::after{transform:rotate(45deg)}
-.faq details p{color:var(--muted);padding:0 0 26px;max-width:680px}
+.faq details p{color:var(--muted);padding:0 0 24px;max-width:680px}
 
-/* ---------- Final CTA ---------- */
-.final{padding:190px 0 160px;text-align:center;overflow:hidden;
-  background:radial-gradient(60% 70% at 50% 100%,rgba(255,150,0,.35),transparent 70%),var(--bg)}
-.drip{position:absolute;top:0;left:0;width:100%;height:120px}
-.final h2{font-size:clamp(44px,7vw,96px);font-weight:900;margin:22px auto 22px;max-width:900px}
-.final p{color:var(--muted);font-size:20px;max-width:560px;margin:0 auto 46px}
-.final .btn{font-size:20px;padding:22px 38px}
-.final small{display:block;margin-top:28px;color:var(--muted);font-size:14px}
-.drop{position:absolute;width:14px;height:20px;background:var(--gold);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;animation:fall 3.4s cubic-bezier(.55,0,1,.45) infinite;opacity:0}
-@keyframes fall{0%{transform:translateY(60px) scaleY(.6);opacity:0}15%{opacity:1}100%{transform:translateY(420px) scaleY(1.2);opacity:0}}
+/* ---------- CTA final ---------- */
+.final{padding:130px 0 140px;text-align:center;overflow:hidden;background:var(--ink2);border-top:1px solid var(--line)}
+.final .logo{width:230px;margin:0 auto 34px}
+.final h2{font-size:clamp(34px,5vw,62px);font-weight:800;margin:0 auto 18px;max-width:860px}
+.final p{color:var(--muted);font-size:19px;max-width:560px;margin:0 auto 40px}
+.final .btn{font-size:19px;padding:20px 36px}
+.final small{display:block;margin-top:26px;color:var(--muted);font-size:14px}
 
 /* ---------- Footer ---------- */
-footer{border-top:1px solid var(--line);padding:56px 0 110px;color:var(--muted);font-size:15px}
+footer{background:#0B0A08;border-top:1px solid var(--line);padding:60px 0 110px;color:var(--muted);font-size:15px}
 footer .wrap{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}
-footer h4{color:var(--cream);font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
-footer a:hover{color:var(--gold)}
+footer .logo{width:170px;margin-bottom:18px}
+footer h4{color:var(--cream);font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
+footer a:hover{color:var(--yellow)}
 footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;font-size:13px}
 
-/* ---------- Floating WhatsApp ---------- */
-.wa-float{
-  position:fixed;right:22px;bottom:22px;z-index:60;width:66px;height:66px;border-radius:50%;
-  background:linear-gradient(180deg,#2ee877,#1fb85a);display:grid;place-items:center;
-  box-shadow:0 12px 30px rgba(37,211,102,.45);transition:transform .25s;
-}
+/* ---------- WhatsApp flotante (verde WhatsApp, reconocible) ---------- */
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:60;width:64px;height:64px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 12px 30px rgba(37,211,102,.4);transition:transform .25s}
 .wa-float:hover{transform:scale(1.08)}
 .wa-float svg{width:34px;height:34px;fill:#fff}
-.wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--wa);animation:ping 2s ease-out infinite}
-@keyframes ping{to{transform:scale(1.7);opacity:0}}
-.wa-bubble{position:absolute;right:80px;top:50%;transform:translateY(-50%);background:var(--cream);color:#1a1006;padding:10px 16px;border-radius:14px;font-weight:700;font-size:14px;white-space:nowrap;box-shadow:0 10px 30px rgba(0,0,0,.35);transition:opacity .4s,transform .4s}
+.wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--wa);animation:ping 2.4s ease-out infinite}
+@keyframes ping{to{transform:scale(1.6);opacity:0}}
+.wa-bubble{position:absolute;right:78px;top:50%;transform:translateY(-50%);background:var(--cream);color:var(--text-dark);padding:10px 16px;border-radius:14px;font-weight:500;font-size:14px;white-space:nowrap;box-shadow:0 10px 30px rgba(0,0,0,.35);transition:opacity .4s,transform .4s}
 .wa-bubble::after{content:"";position:absolute;right:-6px;top:50%;margin-top:-6px;border:6px solid transparent;border-right:0;border-left-color:var(--cream)}
 .wa-bubble.hide{opacity:0;transform:translateY(-50%) translateX(10px);pointer-events:none}
 
-.no-webgl #hero3d{display:none}
-.no-webgl .hero::after{content:"";position:absolute;right:-6%;top:12%;width:55%;height:76%;z-index:-1;opacity:.5;
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='98' viewBox='0 0 56 98'%3E%3Cpath d='M28 66L0 50V16L28 0l28 16v34L28 66zm0 32L0 82V66l28 16 28-16v16L28 98z' fill='none' stroke='%23ffb81c' stroke-width='2'/%3E%3C/svg%3E");
-  -webkit-mask:radial-gradient(closest-side,#000,transparent);mask:radial-gradient(closest-side,#000,transparent)}
-
 /* ---------- Responsive ---------- */
 @media (max-width:1020px){
+  .hero .wrap{grid-template-columns:1fr;gap:20px}
+  .hero-art{height:440px;max-width:560px;width:100%;margin:0 auto}
   .values-grid{grid-template-columns:repeat(2,1fr)}
   .origin-grid,.b2b-grid{grid-template-columns:1fr;gap:56px}
   .stats{grid-template-columns:repeat(2,1fr)}
@@ -317,46 +313,46 @@ footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;
 @media (max-width:720px){
   body{font-size:16px}
   .wrap{padding:0 16px}
-  .sec{padding:96px 0}
-  .hero{align-items:flex-start}
-  .hero .wrap{padding-top:104px;padding-bottom:70px}
-  .hero-copy{padding-top:0}
+  .sec{padding:88px 0}
+  .hero{padding:118px 0 70px}
   .hero-ctas .btn{width:100%}
   .hero-trust{gap:18px}
-  .hint3d{display:none}
+  .hero-art{height:380px}
+  .hero-art .sun{width:280px}
+  .pcard{width:150px;padding:5px 5px 0;border-radius:14px}
+  .pcard img{border-radius:10px}
+  .pcard span{font-size:11px;padding:7px 4px 9px}
+  .pcard.c2{margin-left:-75px}
+  .nav .wrap{height:70px}
+  .nav .brand .logo{width:112px}
   .values-grid,.steps{grid-template-columns:1fr}
-  .origin-badge{right:-6px;top:-30px;width:104px;height:116px}
-  .origin-badge b{font-size:30px}
-  .journey::before{left:13px}
-  .jstep{grid-template-columns:1fr;gap:22px;padding-left:46px;margin-bottom:56px}
-  .jstep::before{left:13px;top:6px;margin-top:0}
+  .steps{gap:40px}
+  .origin-badge{right:-6px;top:-34px;width:100px;height:100px}
+  .origin-badge b{font-size:32px}
+  .journey::before{left:12px}
+  .jstep{grid-template-columns:1fr;gap:22px;padding-left:44px;margin-bottom:56px}
+  .jstep::before{left:12px;top:8px;margin-top:0}
   .jtext,.jstep:nth-child(even) .jtext{grid-column:1;text-align:left}
   .jstep:nth-child(even) .jmedia{grid-column:1;grid-row:2}
-  .jyear{font-size:42px}
-  .today-hero{min-height:480px;border-radius:24px}
+  .jyear{font-size:38px}
+  .today-hero{min-height:480px;border-radius:22px}
   .today-hero .inner{padding:28px 22px}
-  .stat{padding:24px 18px}
-  .stat b{font-size:38px}
+  .stat{padding:22px 18px}
+  .stat b{font-size:34px}
   .quote{margin-top:56px}
   .nav .btn span{display:none}
-  .nav .btn{padding:12px}
-  .brand small{display:none}
+  .nav .btn{padding:11px}
   footer .wrap{grid-template-columns:1fr}
-  .final .btn{width:100%;font-size:18px;padding:20px}
+  .final .btn{width:100%;font-size:17px;padding:18px}
+  .final .logo{width:190px}
   .wa-bubble{display:none}
-  .cf{height:530px}
+  .cf{height:520px}
   .cf-card{width:270px;margin-left:-135px}
-  .cf-nav{top:150px;width:46px;height:46px}
+  .cf-nav{top:150px;width:44px;height:44px}
   .cf-prev{left:8px}
   .cf-next{right:8px}
   .product-cta .btn{width:100%}
   .btn{white-space:normal;text-align:center}
-}
-/* pantallas verticales: el panal 3D va debajo del texto */
-@media (max-aspect-ratio:19/20){
-  .hero{align-items:flex-start}
-  .hero .wrap{padding-bottom:400px}
-  .hint3d{display:none}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.001s!important;animation-iteration-count:1!important;transition-duration:.001s!important}
@@ -366,18 +362,19 @@ footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;
 </head>
 <body>
 
-<!-- Ícono de WhatsApp reutilizable -->
+<!-- Logo oficial, sol rayado e íconos reutilizables -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-wa" viewBox="0 0 32 32"><path fill="currentColor" d="M16.04 3C8.86 3 3.02 8.83 3.02 16c0 2.29.6 4.53 1.74 6.5L3 29l6.68-1.75A13 13 0 0 0 16.04 29C23.2 29 29 23.17 29 16S23.2 3 16.04 3zm0 23.8c-2.02 0-4-.54-5.72-1.57l-.41-.24-3.97 1.04 1.06-3.86-.27-.4A10.73 10.73 0 0 1 5.27 16c0-5.94 4.83-10.77 10.77-10.77 5.93 0 10.75 4.83 10.75 10.77 0 5.94-4.82 10.8-10.75 10.8zm5.9-8.07c-.32-.16-1.91-.94-2.2-1.05-.3-.1-.51-.16-.73.16-.21.32-.83 1.05-1.02 1.27-.19.21-.38.24-.7.08-.32-.16-1.36-.5-2.59-1.6-.96-.85-1.6-1.9-1.79-2.22-.19-.32-.02-.5.14-.66.15-.14.32-.38.48-.56.16-.19.21-.32.32-.54.1-.21.05-.4-.03-.56-.08-.16-.72-1.74-.99-2.38-.26-.62-.52-.54-.72-.55h-.62c-.21 0-.56.08-.85.4-.3.32-1.12 1.1-1.12 2.67 0 1.58 1.15 3.1 1.31 3.32.16.21 2.26 3.45 5.47 4.84.77.33 1.36.53 1.83.68.77.24 1.47.21 2.02.13.62-.09 1.91-.78 2.18-1.53.27-.75.27-1.4.19-1.53-.08-.13-.29-.21-.61-.37z"/></symbol>
+  <symbol id="logo" viewBox="91 83 255 96"><g style="fill:var(--logo-sun,var(--yellow))"><ellipse cx="185.0" cy="86.5" rx="15.0" ry="1.9"/><ellipse cx="185.0" cy="92.5" rx="20.5" ry="2.9"/><ellipse cx="185.0" cy="99.5" rx="26.0" ry="2.9"/><ellipse cx="185.0" cy="107.5" rx="29.5" ry="2.9"/><ellipse cx="185.0" cy="115.0" rx="26.0" ry="3.4"/><ellipse cx="185.0" cy="122.5" rx="21.5" ry="2.9"/><ellipse cx="185.0" cy="129.0" rx="15.0" ry="2.4"/></g>
+<path style="fill:var(--logo-script,#fff)" d="M112.38 158.10C111.99 157.97 111.44 157.68 111.16 157.44C110.87 157.20 110.55 157.00 110.44 157.00C110.32 157.00 110.01 156.78 109.75 156.50C109.49 156.22 109.19 156.00 109.09 156.00C108.89 156.00 108.08 155.36 107.24 154.54C106.94 154.24 106.60 154.00 106.50 154.00C106.39 154.00 105.65 154.61 104.86 155.35C104.07 156.09 103.15 156.84 102.83 157.00C102.51 157.16 102.11 157.45 101.94 157.64C101.24 158.41 98.14 158.25 97.06 157.38C95.88 156.43 94.28 154.73 94.04 154.17C93.91 153.85 93.65 153.38 93.48 153.14C93.03 152.50 93.07 151.11 93.58 149.63C93.81 148.98 94.00 148.23 94.00 147.97C94.00 147.71 94.23 147.07 94.50 146.56C94.77 146.04 95.00 145.50 95.00 145.35C95.00 145.20 95.23 144.75 95.50 144.33C95.77 143.92 96.00 143.50 96.00 143.40C96.00 143.30 96.18 142.95 96.40 142.62C96.62 142.30 96.85 141.86 96.92 141.64C96.98 141.43 97.18 141.10 97.34 140.91C97.51 140.73 97.78 140.28 97.93 139.92C98.08 139.55 98.36 139.10 98.56 138.91C98.76 138.72 99.05 138.34 99.21 138.07C100.96 135.14 104.48 130.87 108.23 127.17C108.95 126.46 109.60 125.81 109.68 125.73C110.58 124.82 110.85 124.31 110.99 123.23C111.07 122.60 111.30 121.73 111.49 121.30C111.73 120.77 111.90 119.90 112.00 118.69C112.09 117.69 112.31 116.14 112.50 115.23C112.68 114.32 112.83 113.16 112.83 112.65C112.83 111.58 113.10 110.67 113.41 110.67C113.77 110.67 114.89 111.18 115.35 111.56C115.59 111.76 116.04 112.07 116.34 112.25C117.44 112.92 117.97 113.26 118.35 113.55C118.94 113.99 119.85 114.63 120.37 114.96C120.63 115.12 120.92 115.51 121.02 115.83C121.29 116.68 121.42 116.75 121.93 116.35C122.18 116.16 122.46 116.00 122.56 116.00C122.67 116.00 123.06 115.78 123.45 115.52C123.83 115.26 124.44 115.00 124.80 114.94C125.16 114.88 125.65 114.68 125.89 114.49C126.13 114.30 126.78 114.08 127.37 113.98C127.95 113.89 128.68 113.65 129.00 113.45C130.05 112.81 135.33 112.85 135.33 113.50C135.33 113.57 135.63 113.75 135.99 113.89C137.03 114.31 138.61 115.60 140.92 117.91C142.90 119.91 143.15 120.54 143.15 123.58C143.16 126.75 142.90 129.50 142.53 130.37C142.34 130.80 142.11 131.68 142.02 132.32C141.93 133.01 141.72 133.69 141.52 133.97C141.33 134.24 141.13 134.77 141.07 135.15C141.00 135.54 140.79 136.10 140.58 136.40C140.38 136.71 140.12 137.22 140.02 137.53C139.91 137.85 139.64 138.36 139.41 138.67C139.19 138.98 139.00 139.36 139.00 139.51C139.00 139.66 138.78 140.11 138.50 140.52C138.23 140.92 138.00 141.33 138.00 141.43C138.00 141.52 137.78 141.82 137.50 142.08C137.22 142.35 137.00 142.65 137.00 142.76C137.00 142.86 136.85 143.08 136.68 143.24C136.50 143.40 136.20 143.86 136.01 144.27C135.82 144.67 135.59 145.00 135.50 145.00C135.41 145.00 135.23 145.21 135.10 145.47C134.86 145.94 131.25 149.63 130.10 150.58C129.77 150.86 129.33 151.24 129.12 151.43C128.92 151.63 128.49 151.92 128.17 152.08C127.85 152.24 127.43 152.50 127.25 152.67C127.07 152.83 126.75 153.01 126.54 153.08C126.34 153.14 126.09 153.33 126.00 153.50C125.91 153.67 125.55 153.90 125.21 154.01C124.87 154.12 124.37 154.39 124.11 154.61C123.85 154.82 123.51 155.00 123.34 155.00C123.18 155.00 122.78 155.22 122.44 155.48C122.11 155.74 121.55 156.00 121.20 156.06C120.84 156.12 120.36 156.31 120.13 156.49C119.90 156.67 119.24 156.90 118.65 156.99C118.06 157.08 117.38 157.32 117.11 157.52C116.80 157.74 116.21 157.93 115.52 158.01C114.91 158.09 114.12 158.19 113.75 158.24C113.38 158.29 112.77 158.23 112.38 158.10ZM220.37 157.99C219.97 157.91 219.42 157.66 219.14 157.42C218.87 157.19 218.55 157.00 218.43 157.00C218.31 157.00 218.08 156.84 217.90 156.65C217.73 156.46 217.36 156.18 217.08 156.04C216.10 155.54 213.96 153.30 212.66 151.42C212.08 150.58 212.08 150.58 212.08 147.08C212.08 143.90 212.11 143.52 212.40 143.08C212.58 142.81 212.82 142.13 212.94 141.56C213.06 141.00 213.33 140.27 213.55 139.94C213.77 139.62 214.00 139.06 214.06 138.70C214.12 138.34 214.28 137.95 214.41 137.84C214.55 137.72 214.78 137.26 214.91 136.80C215.04 136.35 215.35 135.75 215.58 135.48C215.81 135.20 216.00 134.87 216.00 134.75C216.00 134.63 216.18 134.31 216.39 134.05C216.61 133.80 216.97 133.26 217.19 132.86C217.40 132.46 217.71 131.92 217.86 131.65C218.01 131.38 218.33 130.97 218.56 130.75C218.80 130.53 219.00 130.24 219.00 130.10C219.00 129.84 221.46 126.83 221.68 126.83C221.75 126.83 221.85 126.70 221.90 126.54C222.00 126.24 224.60 123.53 225.78 122.50C226.15 122.18 226.91 121.52 227.47 121.03C228.02 120.54 228.70 120.01 228.96 119.86C229.93 119.31 230.55 118.91 230.98 118.56C231.22 118.36 231.74 118.11 232.14 117.99C232.53 117.87 232.92 117.65 233.00 117.49C233.09 117.34 233.51 117.12 233.95 117.01C234.39 116.90 234.99 116.66 235.29 116.48C235.59 116.29 236.34 116.07 236.96 115.99C237.58 115.90 238.43 115.68 238.86 115.50C239.45 115.25 240.02 115.17 241.11 115.17C242.71 115.17 243.39 115.40 245.67 116.75C246.46 117.21 248.56 119.40 248.94 120.14C249.11 120.47 249.40 120.92 249.58 121.14C250.08 121.71 250.06 123.97 249.55 124.92C249.36 125.30 249.14 125.88 249.08 126.22C249.01 126.56 248.75 127.11 248.48 127.44C248.22 127.77 248.00 128.14 248.00 128.26C248.00 128.38 247.82 128.69 247.60 128.95C247.38 129.21 247.10 129.67 246.97 129.97C246.69 130.64 244.34 133.20 241.90 135.50C241.24 136.12 240.58 136.11 239.85 135.48C239.49 135.17 238.95 134.73 238.65 134.50C238.35 134.27 237.84 133.85 237.51 133.56C237.19 133.28 236.75 132.99 236.54 132.93C236.14 132.80 235.94 132.29 236.03 131.65C236.07 131.36 236.27 131.19 236.78 131.00C237.16 130.86 237.65 130.57 237.86 130.37C240.95 127.34 241.59 126.63 242.06 125.71C242.22 125.41 242.42 125.17 242.51 125.17C242.60 125.17 242.86 124.77 243.09 124.29C243.32 123.81 243.62 123.22 243.76 122.98C244.09 122.37 244.16 119.60 243.86 118.88C243.44 117.90 242.00 117.76 240.58 118.57C240.22 118.78 239.70 119.01 239.43 119.07C238.94 119.19 238.48 119.49 237.35 120.46C237.00 120.76 236.64 121.00 236.56 121.00C236.48 121.00 235.98 121.43 235.45 121.96C234.92 122.49 234.36 123.04 234.20 123.19C233.88 123.51 232.61 124.78 232.22 125.19C230.72 126.72 228.43 129.53 227.99 130.35C227.88 130.57 227.65 130.90 227.48 131.08C227.31 131.27 226.91 131.70 226.58 132.05C226.26 132.39 226.00 132.77 226.00 132.88C225.99 132.99 225.77 133.38 225.50 133.74C225.22 134.10 225.00 134.48 225.00 134.59C225.00 134.69 224.84 134.92 224.65 135.10C224.46 135.27 224.20 135.66 224.07 135.97C223.94 136.28 223.65 136.75 223.42 137.03C223.19 137.30 223.00 137.62 223.00 137.73C223.00 137.84 222.81 138.19 222.59 138.49C222.36 138.80 222.09 139.32 221.98 139.65C221.88 139.98 221.66 140.40 221.49 140.58C221.33 140.77 221.11 141.23 221.01 141.60C220.91 141.98 220.69 142.47 220.52 142.69C220.34 142.91 220.11 143.43 220.00 143.84C219.89 144.25 219.65 144.83 219.47 145.12C219.29 145.42 219.07 146.16 218.99 146.76C218.90 147.36 218.70 148.09 218.55 148.38C218.34 148.77 218.25 149.43 218.20 150.75C218.15 152.58 218.15 152.58 218.80 153.29C219.74 154.30 220.24 154.27 222.36 153.03C222.78 152.79 223.46 152.40 223.86 152.19C224.58 151.79 227.44 149.46 228.08 148.74C228.27 148.54 228.87 147.98 229.42 147.51C229.97 147.03 230.89 146.10 231.47 145.45C233.30 143.37 233.63 143.38 236.05 145.58C236.30 145.81 236.61 146.00 236.73 146.00C236.85 146.00 237.11 146.18 237.32 146.40C237.53 146.63 237.91 146.89 238.17 147.00C239.21 147.43 238.97 148.04 237.09 149.76C235.30 151.39 234.63 151.99 233.90 152.61C233.59 152.87 233.16 153.24 232.96 153.43C232.75 153.63 232.30 153.92 231.96 154.08C231.61 154.24 231.33 154.44 231.33 154.52C231.33 154.59 231.04 154.81 230.69 154.99C230.33 155.17 230.00 155.43 229.95 155.56C229.90 155.69 229.57 155.89 229.22 156.00C228.87 156.12 228.42 156.36 228.22 156.54C228.02 156.72 227.50 156.94 227.06 157.02C226.63 157.10 226.10 157.32 225.90 157.52C225.30 158.07 222.17 158.34 220.37 157.99ZM160.92 155.32C160.64 155.15 160.25 155.00 160.05 155.00C159.86 155.00 159.48 154.82 159.22 154.61C158.96 154.39 158.59 154.13 158.39 154.03C158.20 153.93 157.88 153.54 157.68 153.16C157.35 152.53 157.35 152.45 157.59 151.98C158.09 151.02 157.29 150.75 155.49 151.26C154.99 151.41 154.07 151.59 153.44 151.68C152.20 151.86 151.59 152.11 151.10 152.65C150.92 152.84 150.69 153.00 150.57 153.00C150.45 153.00 150.13 153.19 149.85 153.43C149.57 153.67 149.06 153.94 148.72 154.03C148.39 154.12 147.90 154.35 147.65 154.54C146.91 155.09 143.98 155.41 142.73 155.08C142.20 154.95 141.62 154.69 141.43 154.52C141.24 154.35 140.89 154.10 140.64 153.98C140.40 153.85 139.92 153.41 139.58 153.00C138.96 152.26 138.96 152.26 139.03 150.13C139.09 148.32 139.14 147.94 139.44 147.55C139.63 147.29 139.87 146.81 139.98 146.47C140.09 146.14 140.30 145.77 140.44 145.65C140.58 145.54 140.80 145.23 140.94 144.96C141.39 144.08 142.82 142.77 144.08 142.07C144.36 141.92 144.75 141.64 144.95 141.46C145.15 141.28 145.66 141.06 146.09 140.98C146.51 140.90 147.09 140.67 147.38 140.47C147.74 140.21 148.21 140.08 148.92 140.03C149.90 139.97 149.97 139.99 150.71 140.61C151.13 140.96 151.48 141.37 151.49 141.51C151.50 141.82 150.71 142.65 149.43 143.67C148.91 144.08 148.17 144.86 147.78 145.40C147.40 145.94 146.84 146.65 146.54 146.97C146.24 147.29 146.00 147.64 146.00 147.75C146.00 147.86 145.80 148.24 145.57 148.59C145.12 149.25 144.74 151.10 144.92 151.69C145.05 152.09 145.64 152.23 146.23 152.01C146.49 151.91 147.20 151.33 147.81 150.71C148.92 149.59 148.92 149.59 149.01 148.23C149.09 147.08 149.17 146.80 149.55 146.34C149.80 146.05 150.00 145.73 150.00 145.63C150.00 145.46 150.53 144.78 151.75 143.40C152.41 142.67 152.43 142.66 153.00 142.85C153.63 143.07 154.63 144.04 155.19 144.99C155.60 145.69 155.63 146.65 155.26 147.54C154.94 148.31 154.93 149.10 155.24 149.22C155.37 149.27 155.72 149.25 156.03 149.17C156.33 149.10 156.77 148.99 157.00 148.94C157.73 148.78 159.00 147.49 159.00 146.91C159.00 146.64 159.19 146.13 159.42 145.80C159.65 145.46 159.91 144.81 160.01 144.36C160.11 143.91 160.37 143.29 160.59 142.99C160.82 142.68 161.00 142.24 161.00 141.99C161.00 141.74 161.26 141.21 161.59 140.77C162.30 139.84 162.92 139.75 163.84 140.42C164.15 140.65 164.70 140.92 165.05 141.01C165.40 141.11 165.81 141.33 165.96 141.51C166.12 141.69 166.33 141.83 166.43 141.83C166.82 141.83 167.08 142.41 167.08 143.23C167.08 144.31 167.45 144.44 168.25 143.64C168.55 143.33 169.15 142.82 169.58 142.50C170.01 142.18 170.56 141.71 170.80 141.46C171.04 141.21 171.32 141.00 171.41 141.00C171.51 141.00 171.92 140.76 172.33 140.48C173.20 139.89 174.25 139.88 174.89 140.46C175.09 140.64 175.51 140.88 175.83 140.99C176.15 141.09 176.75 141.48 177.17 141.84C177.84 142.43 177.92 142.57 177.92 143.23C177.92 143.74 177.80 144.13 177.54 144.47C177.34 144.75 177.10 145.32 177.00 145.73C176.91 146.14 176.65 146.76 176.42 147.10C176.19 147.44 176.00 147.88 176.00 148.08C176.00 148.29 175.78 148.74 175.50 149.08C175.22 149.43 175.00 149.89 175.00 150.11C175.00 150.34 174.88 150.75 174.74 151.03C174.45 151.59 174.53 151.76 175.18 151.92C175.50 151.99 175.74 151.92 176.10 151.62C176.37 151.40 176.81 151.10 177.10 150.95C177.38 150.81 177.71 150.57 177.83 150.42C177.96 150.27 178.29 150.04 178.57 149.91C179.33 149.55 181.27 148.17 181.91 147.54C182.42 147.03 182.91 147.07 183.32 147.65C183.84 148.37 183.76 148.56 182.64 149.36C182.07 149.76 181.40 150.29 181.15 150.54C180.90 150.79 180.63 151.00 180.54 151.00C180.46 151.00 180.24 151.16 180.07 151.35C179.89 151.54 179.45 151.85 179.08 152.04C178.72 152.22 178.27 152.50 178.08 152.67C177.90 152.83 177.58 153.01 177.37 153.08C177.17 153.14 176.93 153.33 176.83 153.50C176.74 153.67 176.39 153.90 176.04 154.01C175.70 154.12 175.25 154.35 175.04 154.51C174.44 154.97 173.09 155.22 171.72 155.12C170.66 155.04 170.41 154.96 169.92 154.53C169.61 154.25 169.25 153.97 169.13 153.89C168.80 153.68 168.33 152.89 168.33 152.54C168.33 152.38 168.44 152.09 168.57 151.90C168.70 151.72 168.86 151.27 168.92 150.91C168.99 150.55 169.26 149.87 169.52 149.40C169.78 148.93 170.00 148.39 170.00 148.21C170.00 148.03 170.23 147.45 170.51 146.93C171.04 145.94 171.12 145.01 170.69 144.87C170.43 144.78 167.42 147.84 167.05 148.57C166.90 148.85 166.59 149.33 166.35 149.62C166.11 149.92 165.71 150.42 165.46 150.73C165.21 151.04 165.00 151.37 165.00 151.45C165.00 151.54 164.82 151.77 164.61 151.98C164.39 152.18 164.12 152.66 164.01 153.05C163.89 153.43 163.62 153.91 163.40 154.12C163.18 154.32 163.00 154.59 163.00 154.71C163.00 155.12 162.34 155.67 161.87 155.65C161.62 155.65 161.19 155.50 160.92 155.32ZM329.00 155.34C328.86 155.26 328.31 155.12 327.78 155.02C327.18 154.91 326.61 154.68 326.31 154.42C326.03 154.19 325.69 154.00 325.55 154.00C325.18 154.00 324.00 152.77 324.00 152.38C324.00 151.71 324.38 151.45 325.18 151.57C327.35 151.90 327.60 151.88 328.31 151.41C329.50 150.63 329.88 149.57 329.81 147.32C329.75 145.74 329.70 145.43 329.43 145.24C328.96 144.89 328.42 145.11 327.47 146.03C327.00 146.48 326.42 146.96 326.18 147.10C325.49 147.50 324.63 148.13 324.05 148.67C323.75 148.94 323.43 149.17 323.33 149.17C323.23 149.17 322.87 149.35 322.54 149.58C322.20 149.81 321.78 150.00 321.60 150.00C321.42 150.00 320.94 150.20 320.52 150.44C319.97 150.76 319.18 150.98 317.59 151.25C315.25 151.64 314.42 151.92 313.64 152.58C313.37 152.81 313.03 153.00 312.90 153.00C312.77 153.00 312.43 153.22 312.14 153.50C311.85 153.78 311.50 154.00 311.36 154.00C311.23 154.00 310.77 154.20 310.35 154.45C308.67 155.43 304.85 155.44 303.69 154.46C303.40 154.22 303.02 153.98 302.83 153.92C302.65 153.86 302.31 153.48 302.08 153.09C301.84 152.69 301.41 152.18 301.11 151.95C300.57 151.54 300.57 151.54 299.91 151.89C299.55 152.09 299.08 152.42 298.87 152.62C298.67 152.83 298.40 153.00 298.27 153.00C298.15 153.00 297.76 153.22 297.42 153.50C297.07 153.78 296.65 154.00 296.49 154.00C296.33 154.00 295.97 154.19 295.70 154.42C294.87 155.11 292.41 155.39 291.17 154.94C290.85 154.82 290.28 154.53 289.92 154.28C289.29 153.86 289.17 153.76 288.75 153.34C288.66 153.24 288.23 152.84 287.80 152.43C287.19 151.85 286.95 151.47 286.72 150.70C286.43 149.72 286.43 149.72 285.79 149.88C285.43 149.97 285.03 150.21 284.90 150.42C284.77 150.62 284.36 150.92 284.00 151.08C283.63 151.25 283.33 151.45 283.33 151.52C283.33 151.60 283.09 151.78 282.79 151.94C282.49 152.09 282.05 152.38 281.80 152.59C281.55 152.80 281.12 153.02 280.85 153.08C280.58 153.14 280.24 153.36 280.11 153.57C279.97 153.78 279.62 154.00 279.33 154.06C279.04 154.12 278.58 154.35 278.32 154.57C277.95 154.88 277.56 155.00 276.61 155.09C274.78 155.26 273.77 154.99 272.77 154.08C271.95 153.33 271.95 153.33 272.04 152.27C272.10 151.55 272.24 151.05 272.48 150.73C272.68 150.46 272.91 149.80 273.00 149.26C273.09 148.70 273.34 148.02 273.58 147.67C274.05 146.99 274.14 145.99 273.76 145.67C273.56 145.51 273.37 145.57 272.79 145.97C272.39 146.25 271.97 146.59 271.85 146.74C271.72 146.88 271.53 147.00 271.42 147.00C271.31 147.00 271.08 147.16 270.90 147.35C270.73 147.54 270.36 147.82 270.08 147.96C269.57 148.22 268.89 148.73 267.97 149.54C267.68 149.79 267.35 150.00 267.23 150.00C267.11 150.00 266.76 150.22 266.44 150.50C266.13 150.78 265.80 151.00 265.72 151.00C265.63 151.00 265.38 151.19 265.15 151.43C264.93 151.67 264.49 151.97 264.17 152.11C263.85 152.24 263.44 152.49 263.25 152.66C263.07 152.82 262.75 153.01 262.54 153.08C262.34 153.14 262.09 153.33 262.00 153.50C261.91 153.67 261.55 153.90 261.21 154.01C260.87 154.12 260.43 154.34 260.25 154.51C259.90 154.82 257.99 155.33 257.16 155.33C256.43 155.33 254.82 154.87 254.47 154.56C254.03 154.16 253.79 153.07 253.91 152.07C254.03 151.16 253.90 150.33 253.64 150.33C253.56 150.33 253.03 150.71 252.48 151.17C251.93 151.62 251.38 152.00 251.26 152.00C251.14 152.00 250.76 152.22 250.42 152.50C250.07 152.78 249.69 153.00 249.57 153.00C249.46 153.00 249.15 153.18 248.89 153.40C248.63 153.62 248.15 153.87 247.83 153.96C247.51 154.05 246.97 154.31 246.62 154.55C246.18 154.84 245.66 155.01 244.90 155.09C243.34 155.26 242.72 155.03 241.87 153.98C241.02 152.94 240.95 152.20 241.59 150.92C241.81 150.46 242.00 149.96 242.00 149.82C242.00 149.67 242.21 149.33 242.46 149.05C242.71 148.78 243.07 148.31 243.25 148.00C243.43 147.69 243.73 147.21 243.92 146.93C244.39 146.20 246.38 144.24 246.95 143.94C247.21 143.81 247.56 143.54 247.73 143.35C247.91 143.16 248.15 143.00 248.27 143.00C248.39 143.00 248.72 142.78 249.00 142.50C249.28 142.22 249.62 142.00 249.74 142.00C249.87 142.00 250.19 141.82 250.45 141.60C250.71 141.38 251.21 141.12 251.57 141.03C251.92 140.93 252.51 140.64 252.88 140.38C253.50 139.95 253.68 139.92 255.11 139.92C256.66 139.92 256.66 139.92 257.37 140.63C258.19 141.44 258.13 141.80 257.15 142.05C256.84 142.13 256.42 142.34 256.23 142.53C256.03 142.71 255.65 142.98 255.38 143.14C254.15 143.84 253.73 144.14 252.93 144.89C252.47 145.33 251.90 145.80 251.67 145.93C251.05 146.28 249.10 148.57 248.91 149.18C248.77 149.62 248.94 150.27 249.21 150.37C249.58 150.51 252.35 149.08 252.94 148.43C253.15 148.21 253.47 147.98 253.65 147.92C253.82 147.87 254.01 147.71 254.06 147.57C254.12 147.43 254.45 147.19 254.81 147.04C255.39 146.79 257.19 145.34 257.73 144.69C258.29 144.02 259.28 143.17 259.50 143.17C259.85 143.17 260.80 144.36 261.07 145.14C261.20 145.50 261.40 145.95 261.52 146.14C261.71 146.44 261.69 146.54 261.39 146.87C261.20 147.08 261.00 147.50 260.94 147.81C260.88 148.11 260.67 148.59 260.48 148.86C260.01 149.52 259.83 151.49 260.21 151.80C260.47 152.01 261.33 151.78 261.33 151.49C261.33 151.43 261.58 151.28 261.88 151.16C262.17 151.04 262.69 150.71 263.02 150.43C263.36 150.15 263.88 149.75 264.19 149.54C264.50 149.33 265.01 148.97 265.33 148.75C265.65 148.52 266.16 148.18 266.46 147.98C266.76 147.79 267.00 147.56 267.00 147.48C267.00 147.40 267.21 147.24 267.46 147.13C267.71 147.02 268.16 146.74 268.45 146.51C268.74 146.27 269.27 145.87 269.62 145.62C269.96 145.36 270.42 145.03 270.64 144.87C271.18 144.46 271.00 144.16 269.73 143.35C268.36 142.47 268.19 142.07 268.71 141.01C268.93 140.58 269.31 139.96 269.55 139.64C269.80 139.32 270.00 138.96 270.00 138.86C270.00 138.75 270.23 138.42 270.51 138.13C270.80 137.83 271.08 137.49 271.15 137.37C271.21 137.25 271.53 137.11 271.84 137.06C272.69 136.93 273.92 137.91 274.06 138.83C274.17 139.49 274.65 140.00 275.17 140.00C275.32 140.00 275.69 140.19 275.99 140.41C276.30 140.64 276.82 140.91 277.15 141.02C277.48 141.13 277.96 141.39 278.22 141.61C278.48 141.82 278.76 142.00 278.85 142.00C278.94 142.00 279.39 142.26 279.86 142.58C280.32 142.90 280.78 143.17 280.87 143.17C281.22 143.17 280.93 145.29 280.53 145.72C280.32 145.94 280.07 146.41 279.97 146.77C279.88 147.12 279.66 147.61 279.49 147.85C279.32 148.09 279.10 148.64 279.00 149.07C278.90 149.51 278.64 150.14 278.41 150.47C278.19 150.80 278.00 151.20 278.00 151.35C278.00 152.06 279.01 152.16 279.62 151.52C279.78 151.34 280.18 151.08 280.50 150.93C281.12 150.64 281.94 150.11 282.75 149.45C283.03 149.23 283.42 148.99 283.62 148.93C283.83 148.86 284.00 148.74 284.00 148.66C284.00 148.57 284.25 148.34 284.56 148.13C286.26 146.97 286.82 146.46 287.01 145.87C287.12 145.53 287.36 144.96 287.54 144.60C287.72 144.24 287.93 143.46 288.02 142.85C288.10 142.24 288.32 141.55 288.49 141.31C288.67 141.07 288.87 140.47 288.93 139.99C289.00 139.50 289.26 138.70 289.53 138.20C289.79 137.71 290.00 137.16 290.00 137.00C290.00 136.83 290.18 136.48 290.39 136.22C290.61 135.96 290.88 135.47 290.99 135.13C291.10 134.78 291.27 134.46 291.36 134.40C291.46 134.34 291.71 133.90 291.92 133.43C292.36 132.43 293.15 131.22 293.65 130.76C293.84 130.59 294.00 130.37 294.01 130.27C294.01 130.17 294.24 129.82 294.51 129.51C294.78 129.19 295.00 128.85 295.00 128.75C295.00 128.64 295.22 128.35 295.50 128.08C295.78 127.82 296.00 127.54 296.00 127.46C296.00 127.18 302.07 121.00 302.35 121.00C302.40 121.00 302.69 120.77 302.97 120.50C303.26 120.23 303.60 120.00 303.74 120.00C303.87 120.00 304.20 119.81 304.47 119.58C304.75 119.35 305.23 119.05 305.54 118.92C305.85 118.79 306.20 118.57 306.32 118.44C306.61 118.09 308.23 117.78 309.09 117.91C309.51 117.97 310.07 118.22 310.42 118.50C310.75 118.77 311.17 119.03 311.35 119.09C311.52 119.14 311.67 119.26 311.67 119.34C311.67 119.42 311.94 119.75 312.27 120.07C312.98 120.76 313.13 121.73 312.61 122.30C312.45 122.49 312.20 122.99 312.07 123.43C311.94 123.87 311.72 124.34 311.59 124.49C311.46 124.63 311.20 125.09 311.01 125.50C310.52 126.56 309.68 127.75 308.62 128.87C308.37 129.15 308.05 129.57 307.92 129.81C307.79 130.05 307.10 130.90 306.38 131.69C305.67 132.49 304.82 133.45 304.50 133.84C303.80 134.68 297.88 140.64 297.39 141.00C295.29 142.52 295.22 142.60 294.76 143.95C294.23 145.49 294.08 146.16 293.85 147.83C293.76 148.52 293.60 149.60 293.49 150.24C293.30 151.36 293.31 151.41 293.67 151.70C294.17 152.11 294.92 152.08 295.74 151.61C296.11 151.39 296.69 151.12 297.02 151.02C297.35 150.91 297.76 150.67 297.93 150.49C298.09 150.30 298.53 150.00 298.91 149.82C300.85 148.87 301.72 148.01 302.00 146.75C302.10 146.31 302.36 145.73 302.59 145.46C302.82 145.19 303.00 144.90 303.00 144.81C303.00 144.72 303.48 144.17 304.07 143.58C304.65 142.99 305.16 142.45 305.19 142.37C305.26 142.21 306.31 141.58 307.58 140.92C308.04 140.68 308.60 140.38 308.83 140.25C309.06 140.11 309.41 140.00 309.59 140.00C309.78 140.00 310.35 139.88 310.84 139.73C311.69 139.48 311.81 139.48 312.62 139.76C313.67 140.11 313.97 140.41 314.04 141.17C314.08 141.68 314.02 141.77 313.46 142.04C313.11 142.20 312.83 142.41 312.83 142.50C312.83 142.59 312.62 142.77 312.35 142.91C312.09 143.04 311.41 143.70 310.85 144.37C310.29 145.04 309.64 145.77 309.41 146.00C309.19 146.23 309.00 146.51 309.00 146.62C309.00 146.73 308.81 147.02 308.58 147.27C308.35 147.52 308.12 147.92 308.07 148.15C308.02 148.39 307.82 148.96 307.63 149.42C307.43 149.88 307.27 150.62 307.26 151.08C307.25 151.92 307.25 151.92 308.00 151.96C308.72 152.01 308.80 151.97 309.94 150.88C310.85 150.02 311.18 149.59 311.30 149.08C311.39 148.72 311.59 147.89 311.75 147.25C311.90 146.61 312.15 145.91 312.30 145.69C312.46 145.47 312.74 145.04 312.93 144.73C313.12 144.42 313.40 144.04 313.55 143.88C313.70 143.72 314.15 143.23 314.55 142.79C314.95 142.36 315.38 142.00 315.51 142.00C315.64 142.00 316.05 142.35 316.42 142.76C316.78 143.18 317.28 143.71 317.52 143.94C317.76 144.16 318.09 144.65 318.25 145.01C318.54 145.64 318.54 145.71 318.25 146.71C318.08 147.28 317.84 147.92 317.71 148.14C317.31 148.79 317.54 149.00 318.65 149.00C319.45 149.00 319.73 148.92 320.11 148.60C320.37 148.38 320.87 148.13 321.21 148.03C321.56 147.94 322.07 147.67 322.35 147.43C322.63 147.19 322.96 147.00 323.08 147.00C323.40 147.00 328.00 142.65 328.00 142.35C328.00 142.27 328.22 141.93 328.50 141.58C328.78 141.24 329.00 140.79 329.00 140.59C329.00 140.38 329.18 139.89 329.39 139.48C329.60 139.08 329.87 138.47 329.99 138.12C330.34 137.05 331.47 136.64 332.16 137.33C332.34 137.51 332.79 137.85 333.16 138.08C333.53 138.31 333.83 138.57 333.83 138.65C333.83 138.73 334.06 138.89 334.34 139.00C335.08 139.31 335.59 140.37 335.32 141.03C335.06 141.65 335.22 143.81 335.59 144.83C336.01 145.97 336.12 148.92 335.77 149.93C335.41 150.99 335.41 151.00 336.05 151.00C336.45 151.00 336.74 150.86 337.08 150.50C337.35 150.22 337.65 150.00 337.76 150.00C337.87 150.00 338.24 149.78 338.58 149.50C338.93 149.22 339.30 149.00 339.40 149.00C339.50 149.00 339.77 148.81 340.00 148.58C340.71 147.88 342.18 147.00 342.65 147.00C342.90 147.00 343.25 147.10 343.42 147.23C343.73 147.46 343.73 147.48 343.41 148.09C343.23 148.43 342.84 148.86 342.54 149.04C342.24 149.22 342.00 149.43 342.00 149.51C342.00 149.59 341.72 149.81 341.38 150.00C340.54 150.46 339.68 151.06 339.12 151.57C338.86 151.81 338.55 152.00 338.42 152.00C338.30 152.00 337.98 152.18 337.72 152.39C337.46 152.61 337.06 152.84 336.83 152.91C336.60 152.98 336.22 153.24 335.99 153.49C335.74 153.76 335.29 154.00 334.91 154.07C334.55 154.14 334.09 154.34 333.90 154.52C333.70 154.71 333.12 154.91 332.53 155.01C331.96 155.10 331.31 155.25 331.07 155.34C330.55 155.54 329.34 155.54 329.00 155.34ZM99.57 152.29C99.91 151.90 100.31 151.45 100.46 151.28C100.75 150.98 101.13 150.30 101.89 148.74C102.11 148.28 102.42 147.80 102.56 147.68C102.71 147.56 102.91 147.15 103.02 146.77C103.12 146.39 103.34 145.95 103.51 145.79C103.68 145.63 103.87 145.22 103.93 144.88C103.99 144.53 104.21 143.94 104.43 143.57C104.64 143.20 104.90 142.54 105.01 142.12C105.11 141.70 105.34 141.23 105.51 141.07C105.68 140.92 105.90 140.37 106.01 139.86C106.11 139.34 106.26 138.79 106.35 138.63C106.43 138.47 106.50 138.21 106.49 138.04C106.49 137.76 106.48 137.76 106.32 138.04C106.23 138.20 105.94 138.44 105.69 138.57C105.43 138.71 104.96 139.16 104.65 139.58C104.05 140.40 103.38 141.27 102.63 142.19C101.81 143.21 101.34 143.91 101.07 144.50C100.92 144.82 100.62 145.29 100.40 145.55C100.18 145.81 100.00 146.16 100.00 146.32C100.00 146.48 99.78 146.95 99.50 147.35C99.23 147.75 99.00 148.21 99.00 148.36C99.00 148.52 98.80 148.87 98.56 149.16C97.89 149.96 97.66 152.48 98.24 152.87C98.62 153.13 98.98 152.97 99.57 152.29ZM110.69 152.50C111.54 152.22 112.38 152.00 112.55 152.00C112.72 152.00 113.42 151.78 114.11 151.50C114.80 151.22 115.49 151.00 115.66 151.00C115.82 151.00 116.24 150.78 116.58 150.50C116.93 150.22 117.34 150.00 117.50 150.00C117.65 150.00 118.11 149.78 118.52 149.50C118.92 149.23 119.33 149.00 119.44 149.00C119.54 149.00 119.90 148.78 120.24 148.51C120.58 148.24 121.02 147.96 121.22 147.90C121.59 147.79 121.68 147.71 122.95 146.50C123.34 146.13 123.72 145.83 123.81 145.83C124.14 145.83 128.61 141.24 129.00 140.50C129.12 140.27 129.35 139.93 129.52 139.75C130.09 139.12 130.92 138.04 131.25 137.49C131.87 136.47 132.64 135.09 132.92 134.50C133.07 134.18 133.33 133.77 133.50 133.58C133.67 133.40 133.89 132.94 133.99 132.56C134.09 132.19 134.32 131.69 134.50 131.45C134.69 131.22 134.91 130.64 135.00 130.17C135.09 129.69 135.31 129.10 135.50 128.84C135.69 128.57 135.90 127.87 135.99 127.22C136.08 126.58 136.31 125.73 136.49 125.31C136.90 124.37 137.27 120.27 137.09 118.59C136.98 117.54 136.92 117.41 136.28 116.81C135.90 116.46 135.34 116.12 135.04 116.07C134.24 115.91 132.66 116.15 132.08 116.51C131.80 116.68 131.25 116.87 130.86 116.93C130.47 116.99 129.88 117.22 129.56 117.44C129.24 117.66 128.74 117.95 128.45 118.10C127.30 118.66 126.40 119.18 126.00 119.51C125.34 120.06 124.46 120.64 123.88 120.92C123.58 121.05 123.22 121.36 123.07 121.58C122.92 121.81 122.72 122.00 122.63 122.00C122.54 122.00 122.21 122.21 121.89 122.46C119.73 124.20 119.41 124.68 119.06 126.62C118.95 127.28 118.70 128.03 118.51 128.29C118.32 128.54 118.09 129.17 118.01 129.67C117.93 130.18 117.67 130.96 117.43 131.41C117.19 131.85 117.00 132.46 117.00 132.75C117.00 133.04 116.81 133.64 116.57 134.08C116.34 134.53 116.08 135.26 115.99 135.71C115.91 136.16 115.69 136.73 115.51 136.99C115.33 137.24 115.11 137.77 115.02 138.17C114.93 138.56 114.71 139.09 114.53 139.33C114.35 139.58 114.12 140.05 114.03 140.38C113.94 140.72 113.71 141.20 113.53 141.46C113.35 141.71 113.11 142.26 113.00 142.67C112.89 143.08 112.67 143.57 112.51 143.75C112.35 143.93 112.12 144.35 112.02 144.67C111.91 144.99 111.65 145.51 111.45 145.83C110.91 146.68 110.55 147.31 110.15 148.17C109.95 148.58 109.61 149.13 109.39 149.39C109.18 149.65 109.00 149.96 109.00 150.09C109.00 150.22 108.82 150.54 108.59 150.79C107.41 152.13 107.14 152.52 107.23 152.75C107.39 153.17 108.96 153.06 110.69 152.50ZM299.43 134.91C300.27 134.05 301.38 132.68 302.02 131.73C302.31 131.28 302.64 130.91 303.46 130.10C303.76 129.80 304.00 129.48 304.00 129.39C304.00 129.30 304.16 129.08 304.35 128.90C304.54 128.73 304.85 128.32 305.02 128.00C305.44 127.25 306.06 126.37 306.58 125.79C306.81 125.54 307.00 125.23 307.00 125.11C307.00 124.99 307.19 124.64 307.42 124.33C307.65 124.01 307.93 123.47 308.03 123.13C308.13 122.79 308.36 122.38 308.53 122.23C309.00 121.80 308.93 121.17 308.41 121.17C307.92 121.17 304.67 124.32 304.06 125.40C303.95 125.59 303.70 125.93 303.51 126.16C302.56 127.28 302.00 128.05 302.00 128.24C302.00 128.36 301.78 128.74 301.50 129.08C301.22 129.43 301.00 129.85 301.00 130.02C301.00 130.18 300.78 130.58 300.50 130.89C300.22 131.20 300.00 131.53 300.00 131.62C300.00 131.71 299.78 132.07 299.50 132.42C299.22 132.76 299.00 133.18 299.00 133.34C299.00 133.51 298.81 133.86 298.58 134.14C298.15 134.65 297.99 135.83 298.35 135.83C298.45 135.83 298.94 135.42 299.43 134.91Z"/>
+<text x="134" y="177" textLength="203" lengthAdjust="spacing" style="fill:var(--logo-tag,var(--yellow))" font-family="Poppins, Montserrat, sans-serif" font-weight="500" font-size="15.0">MIEL DE ABEJAS</text></symbol>
+  <symbol id="sun" viewBox="155 82 60 51"><ellipse cx="185.0" cy="86.5" rx="15.0" ry="1.9"/><ellipse cx="185.0" cy="92.5" rx="20.5" ry="2.9"/><ellipse cx="185.0" cy="99.5" rx="26.0" ry="2.9"/><ellipse cx="185.0" cy="107.5" rx="29.5" ry="2.9"/><ellipse cx="185.0" cy="115.0" rx="26.0" ry="3.4"/><ellipse cx="185.0" cy="122.5" rx="21.5" ry="2.9"/><ellipse cx="185.0" cy="129.0" rx="15.0" ry="2.4"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
 </svg>
 
 <header class="nav" id="nav">
   <div class="wrap">
-    <a href="#" class="brand" aria-label="Miel Don Carlos, inicio">
-      <span class="brand-hex"><svg viewBox="0 0 24 24" fill="#2a1500"><ellipse cx="12" cy="13.5" rx="4.2" ry="6"/><path d="M8 11.5h8M8 14.5h8M8.6 17.3h6.8" stroke="#ffb81c" stroke-width="1.4"/><ellipse cx="7" cy="7.5" rx="3.4" ry="2.1" fill="#fff4dc" opacity=".9" transform="rotate(-30 7 7.5)"/><ellipse cx="17" cy="7.5" rx="3.4" ry="2.1" fill="#fff4dc" opacity=".9" transform="rotate(30 17 7.5)"/></svg></span>
-      <span>Don Carlos<small>Miel de abejas · desde 2006</small></span>
-    </a>
+    <a href="#" class="brand" aria-label="Miel Don Carlos, inicio"><svg class="logo" viewBox="0 0 255 96" role="img" aria-label="Miel Don Carlos · Miel de abejas"><use href="#logo"/></svg></a>
     <nav class="nav-links" aria-label="Secciones">
       <a href="#nosotros">Nosotros</a>
       <a href="#miel">Productos</a>
@@ -393,12 +390,12 @@ footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;
 <main>
 <!-- ================= HERO ================= -->
 <section class="hero" id="top">
-  <canvas id="hero3d" aria-hidden="true"></canvas>
   <div class="wrap">
     <div class="hero-copy">
       <span class="eyebrow">Empresa familiar paraguaya · desde 2006</span>
-      <h1>Miel paraguaya con <span class="gold-text">20 años</span> de <em>historia.</em></h1>
+      <h1>Miel paraguaya con <span class="hl">20 años</span> de historia.</h1>
       <p class="lead">Empezamos en 2006 con 50 colmenas. Hoy cuidamos <strong>cerca de 1.000 colmenas en Pozo Colorado, Chaco,</strong> y nuestra miel llega a hogares, supermercados, confiterías y restaurantes.</p>
+      <span class="pure">Miel pura de abejas, sin aditivos</span>
       <div class="hero-ctas">
         <a class="btn btn-wa" data-wa="¡Hola Don Carlos! Quiero comprar miel. ¿Qué variedades y presentaciones tienen disponibles?" href="https://wa.me/595984399696">
           <svg><use href="#i-wa"/></svg> Pedir por WhatsApp
@@ -411,19 +408,24 @@ footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;
         <div><b>≈30</b><span>Artículos y<br>presentaciones</span></div>
       </div>
     </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg class="sun" viewBox="0 0 60 51"><use href="#sun"/></svg>
+      <figure class="pcard c1"><img src="img/linea-clasica.webp" alt="" width="286" height="286"><span>Línea Clásica</span></figure>
+      <figure class="pcard c2"><img src="img/apisana.webp" alt="" width="286" height="286"><span>Apisana · el más vendido</span></figure>
+      <figure class="pcard c3"><img src="img/linea-gourmet.webp" alt="" width="286" height="286"><span>Línea Gourmet</span></figure>
+    </div>
   </div>
-  <div class="hint3d"><span>↻</span>Mové el mouse sobre el panal</div>
 </section>
 
-<div class="ticker-wrap" aria-hidden="true"><div class="ticker">
+<div class="ticker" aria-hidden="true">
   <div class="ticker-track">
     <span>Desde 2006</span><span>Empresa familiar paraguaya</span><span>≈1.000 colmenas en Pozo Colorado</span><span>Línea Clásica</span><span>Línea Gourmet</span><span>Línea Bienestar</span><span>Apisana</span><span>Asunción · Paraguay</span>
     <span>Desde 2006</span><span>Empresa familiar paraguaya</span><span>≈1.000 colmenas en Pozo Colorado</span><span>Línea Clásica</span><span>Línea Gourmet</span><span>Línea Bienestar</span><span>Apisana</span><span>Asunción · Paraguay</span>
   </div>
-</div></div>
+</div>
 
 <!-- ================= ORIGEN ================= -->
-<section class="sec origin" id="nosotros">
+<section class="sec sec-light origin" id="nosotros">
   <div class="wrap origin-grid">
     <div class="origin-media reveal">
       <figure class="photo"><img src="img/historia/fundadores.webp" alt="Los fundadores de Miel Don Carlos con trajes de apicultor en el monte" width="462" height="258"><figcaption>Los comienzos</figcaption></figure>
@@ -431,7 +433,7 @@ footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;
     </div>
     <div class="reveal">
       <span class="eyebrow">Nuestra historia</span>
-      <h2>Una marca que lleva el nombre <span class="gold-text">de un padre.</span></h2>
+      <h2>Una marca que lleva el nombre <span class="hl">de un padre.</span></h2>
       <p>En 2006, <strong>Gerardo y su hermano mayor Carlos</strong> hicieron un curso de apicultura y se entusiasmaron con las abejas. Con el apoyo de su padre, también llamado Carlos, empezaron con <strong>50 colmenas</strong> en un pequeño establecimiento alquilado en Chaco'i.</p>
       <p>La marca nació como homenaje a él. Veinte años después, Miel Don Carlos sigue siendo una empresa familiar paraguaya: más grande y más profesional, con la misma convicción del primer día.</p>
       <a class="btn btn-ghost" href="#historia">Ver nuestra trayectoria <svg style="width:18px;height:18px"><use href="#i-arrow"/></svg></a>
@@ -444,49 +446,48 @@ footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;
   <div class="wrap">
     <div class="sec-head center reveal" style="text-align:center">
       <span class="eyebrow">Nuestros productos</span>
-      <h2>Elegí tu miel <span class="gold-text">Don Carlos.</span></h2>
+      <h2>Elegí tu miel <span class="hl">Don Carlos.</span></h2>
       <p>Cerca de 30 artículos y presentaciones en cinco líneas: Clásica, Especialidades, Gourmet, Apisana y Bienestar. Tocá el que te guste y pedilo por WhatsApp.</p>
     </div>
   </div>
   <div class="cf reveal" id="cf" tabindex="0" role="region" aria-roledescription="carrusel" aria-label="Productos Don Carlos">
-    <canvas id="combs3d" aria-hidden="true"></canvas>
     <div class="cf-track">
-      <article class="cf-card" aria-roledescription="producto"><span class="cf-badge">★ El más vendido</span>
+      <article class="cf-card l-apisana" aria-roledescription="producto"><span class="cf-badge">★ El más vendido</span>
         <img src="img/apisana.webp" alt="Frasco de Miel de Abejas Apisana Don Carlos" width="286" height="286">
         <div class="cf-info"><span class="cf-tag">Línea Apisana</span><h3>Miel Apisana</h3><p>El producto más vendido de nuestra línea. Consultanos por sus beneficios.</p>
         <a class="btn btn-wa" data-wa="¡Hola Don Carlos! Quiero pedir Miel Apisana. ¿Presentaciones y precios?" href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Pedir por WhatsApp</a></div>
       </article>
-      <article class="cf-card" aria-roledescription="producto">
+      <article class="cf-card l-clasica" aria-roledescription="producto">
         <img src="img/linea-clasica.webp" alt="Línea Clásica Don Carlos: miel de abeja en botellas y pote" width="286" height="286">
         <div class="cf-info"><span class="cf-tag">Línea Clásica</span><h3>Miel de Abeja</h3><p>Miel pura de abejas en diferentes tamaños. La de todos los días.</p>
         <a class="btn btn-wa" data-wa="¡Hola Don Carlos! Quiero pedir Miel de Abeja de la Línea Clásica. ¿Qué tamaños y precios tienen?" href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Pedir por WhatsApp</a></div>
       </article>
-      <article class="cf-card" aria-roledescription="producto">
+      <article class="cf-card l-gourmet" aria-roledescription="producto">
         <img src="img/linea-gourmet.webp" alt="Línea Gourmet Don Carlos: miel con jengibre, con limón y con canela" width="286" height="286">
         <div class="cf-info"><span class="cf-tag">Línea Gourmet</span><h3>Jengibre · Limón · Canela</h3><p>Miel con jengibre, con limón y con canela. Sabores para darte un gusto.</p>
         <a class="btn btn-wa" data-wa="¡Hola Don Carlos! Quiero pedir productos de la Línea Gourmet (miel con jengibre, limón o canela). ¿Precios y disponibilidad?" href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Pedir por WhatsApp</a></div>
       </article>
-      <article class="cf-card" aria-roledescription="producto">
+      <article class="cf-card l-especial" aria-roledescription="producto">
         <img src="img/linea-medicinal.webp" alt="Don Carlos: miel con eucalipto, polen y miel con propóleo" width="286" height="286">
         <div class="cf-info"><span class="cf-tag">Especialidades</span><h3>Eucalipto · Polen · Propóleo</h3><p>Miel con propóleos, miel con eucalipto y propóleos, y polen.</p>
         <a class="btn btn-wa" data-wa="¡Hola Don Carlos! Quiero pedir miel con propóleo, con eucalipto o polen. ¿Precios y disponibilidad?" href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Pedir por WhatsApp</a></div>
       </article>
-      <article class="cf-card" aria-roledescription="producto">
+      <article class="cf-card l-bienestar" aria-roledescription="producto">
         <img src="img/linea-polen-jalea.webp" alt="Don Carlos: extracto de propóleo, miel con polen y miel con jalea real" width="286" height="286">
         <div class="cf-info"><span class="cf-tag">Línea Bienestar</span><h3>Polen · Jalea Real</h3><p>Miel con jalea real, miel con polen y extracto de propóleos.</p>
         <a class="btn btn-wa" data-wa="¡Hola Don Carlos! Quiero pedir productos de la Línea Bienestar (jalea real, polen o extracto de propóleo). ¿Precios y disponibilidad?" href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Pedir por WhatsApp</a></div>
       </article>
-      <article class="cf-card" aria-roledescription="producto">
+      <article class="cf-card l-gourmet" aria-roledescription="producto">
         <img src="img/miel-jengibre.webp" alt="Frasco de Miel con Jengibre Don Carlos" width="286" height="286">
         <div class="cf-info"><span class="cf-tag">Línea Gourmet</span><h3>Miel con Jengibre</h3><p>Miel pura con el toque picante del jengibre, en frasco de vidrio.</p>
         <a class="btn btn-wa" data-wa="¡Hola Don Carlos! Quiero pedir Miel con Jengibre. ¿Precio y disponibilidad?" href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Pedir por WhatsApp</a></div>
       </article>
-      <article class="cf-card" aria-roledescription="producto">
+      <article class="cf-card l-clasica" aria-roledescription="producto">
         <img src="img/sachet.webp" alt="Pote de Miel en Sachet Don Carlos, 80 unidades" width="286" height="286">
         <div class="cf-info"><span class="cf-tag">Línea Clásica</span><h3>Miel en Sachet</h3><p>Pote con 80 sachets. Ideal para oficinas, cafeterías, hoteles y para llevar.</p>
         <a class="btn btn-wa" data-wa="¡Hola Don Carlos! Quiero pedir Miel en Sachet (pote de 80 unidades). ¿Precio y disponibilidad?" href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Pedir por WhatsApp</a></div>
       </article>
-      <article class="cf-card" aria-roledescription="producto">
+      <article class="cf-card l-bienestar" aria-roledescription="producto">
         <img src="img/propoleo.webp" alt="Gotero de Extracto de Propóleo Don Carlos" width="286" height="286">
         <div class="cf-info"><span class="cf-tag">Línea Bienestar</span><h3>Extracto de Propóleo</h3><p>Extracto de propóleo en gotero, de la colmena a tu botiquín.</p>
         <a class="btn btn-wa" data-wa="¡Hola Don Carlos! Quiero pedir Extracto de Propóleo. ¿Precio y disponibilidad?" href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Pedir por WhatsApp</a></div>
@@ -497,16 +498,16 @@ footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;
   </div>
   <div class="cf-dots" id="cfDots" role="group" aria-label="Elegí un producto"></div>
   <div class="product-cta reveal">
-    <a class="btn btn-gold" data-wa="¡Hola Don Carlos! Quiero el catálogo completo con precios de sus productos." href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Pedir catálogo completo con precios</a>
+    <a class="btn btn-yellow" data-wa="¡Hola Don Carlos! Quiero el catálogo completo con precios de sus productos." href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Pedir catálogo completo con precios</a>
   </div>
 </section>
 
 <!-- ================= TRAYECTORIA ================= -->
-<section class="sec" id="historia">
+<section class="sec sec-light" id="historia">
   <div class="wrap">
     <div class="sec-head center reveal" style="text-align:center">
       <span class="eyebrow">Trayectoria</span>
-      <h2>20 años de trabajo, <span class="gold-text">etapa por etapa.</span></h2>
+      <h2>20 años de trabajo, <span class="hl">etapa por etapa.</span></h2>
       <p>No llegamos hasta acá de un día para otro. Cada etapa nos dejó un aprendizaje que hoy está en cada frasco.</p>
     </div>
     <div class="journey">
@@ -547,12 +548,12 @@ footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;
 </section>
 
 <!-- ================= HOY ================= -->
-<section class="sec" style="padding-top:20px">
+<section class="sec">
   <div class="wrap">
     <div class="today-hero reveal">
       <img src="img/historia/apiario.webp" alt="Colmenas Don Carlos en el monte chaqueño junto a una camioneta 4x4 cargada de cajas" width="993" height="689" loading="lazy">
       <div class="inner">
-        <span class="eyebrow">Hoy</span>
+        <span class="eyebrow natural">Hoy · Origen</span>
         <h2>Pozo Colorado, Chaco.</h2>
         <p>Ahí, en pleno Chaco paraguayo, están nuestras colmenas. Desde ahí sale la miel que atiende a familias y empresas con un equipo comercial y logístico propio.</p>
       </div>
@@ -563,24 +564,24 @@ footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;
       <div class="stat"><b>10</b><span>personas en el equipo fijo</span></div>
       <div class="stat"><b>+1.000</b><span>colmenas proyectadas</span></div>
     </div>
-    <div class="lines reveal">Nuestras líneas: <span class="l">Clásica</span><span class="l">Especialidades</span><span class="l">Gourmet</span><span class="l">Apisana</span><span class="l">Bienestar</span></div>
+    <div class="lines reveal">Nuestras líneas: <span class="l l-clasica">Clásica</span><span class="l l-especial">Especialidades</span><span class="l l-gourmet">Gourmet</span><span class="l l-apisana">Apisana</span><span class="l l-bienestar">Bienestar</span></div>
   </div>
 </section>
 
 <!-- ================= EMPRESAS ================= -->
-<section class="sec b2b" id="empresas">
+<section class="sec sec-light sec-beige2 b2b" id="empresas">
   <div class="wrap b2b-grid">
     <div class="reveal">
       <span class="eyebrow">Para empresas</span>
-      <h2 style="font-size:clamp(36px,4.4vw,58px);margin:18px 0 18px">Miel paraguaya para <span class="gold-text">tu negocio.</span></h2>
-      <p style="color:var(--muted);font-size:18px">Abastecemos a clientes empresariales con continuidad, con equipo comercial y logístico propio.</p>
+      <h2>Miel paraguaya para <span class="hl">tu negocio.</span></h2>
+      <p style="font-size:18px">Abastecemos a clientes empresariales con continuidad, con equipo comercial y logístico propio.</p>
       <ul class="b2b-list">
         <li>Supermercados, distribuidoras y puntos de venta</li>
         <li>Confiterías y restaurantes</li>
         <li>Fábricas de alimentos que usan miel como materia prima</li>
         <li>Miel en sachet para hoteles, oficinas y cafeterías</li>
       </ul>
-      <a class="btn btn-gold" data-wa="¡Hola Don Carlos! Represento a una empresa y quiero cotizar miel por mayor. ¿Me pasan condiciones y lista de precios?" href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Cotizar para mi empresa</a>
+      <a class="btn btn-wa" data-wa="¡Hola Don Carlos! Represento a una empresa y quiero cotizar miel por mayor. ¿Me pasan condiciones y lista de precios?" href="https://wa.me/595984399696"><svg><use href="#i-wa"/></svg> Cotizar para mi empresa</a>
     </div>
     <figure class="photo reveal"><img src="img/historia/deposito.webp" alt="Camioneta de Don Carlos cargada frente al depósito" width="743" height="417" loading="lazy"><figcaption>Equipo comercial y logístico</figcaption></figure>
   </div>
@@ -591,7 +592,7 @@ footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;
   <div class="wrap">
     <div class="sec-head center reveal" style="text-align:center">
       <span class="eyebrow">Lo que nos sostiene</span>
-      <h2>Valores que <span class="gold-text">no cambiaron.</span></h2>
+      <h2>Valores que <span class="hl">no cambiaron.</span></h2>
     </div>
     <div class="values-grid">
       <article class="value reveal"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2l8.5 5v10L12 22l-8.5-5V7z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div><h3>Honestidad</h3><p>Miel pura y trato claro con cada cliente, desde el primer frasco.</p></article>
@@ -604,11 +605,11 @@ footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;
 </section>
 
 <!-- ================= HOW TO ORDER ================= -->
-<section class="sec" style="background:var(--bg2)">
+<section class="sec sec-light">
   <div class="wrap">
     <div class="sec-head center reveal" style="text-align:center">
       <span class="eyebrow">Así de fácil</span>
-      <h2>Tu pedido en <span class="gold-text">3 pasos.</span></h2>
+      <h2>Tu pedido en <span class="hl">3 pasos.</span></h2>
     </div>
     <div class="steps">
       <div class="step reveal"><h3>Escribinos</h3><p>Tocá cualquier botón verde y se abre WhatsApp con el mensaje listo.</p></div>
@@ -638,13 +639,9 @@ footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;
 
 <!-- ================= FINAL CTA ================= -->
 <section class="final" id="contacto">
-  <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="dripG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e07b00"/><stop offset="1" stop-color="#ffb81c"/></linearGradient></defs><path fill="url(#dripG)" d="M0 0h1440v38c-40 0-52 18-60 44-8 26-34 26-40 0-8-30-26-44-70-44-60 0-70 20-120 20s-60-20-130-20c-40 0-48 30-54 60-6 30-34 30-38 0-5-36-20-60-80-60-70 0-90 26-150 26S600 38 540 38c-36 0-46 14-52 40-6 24-30 24-34 0-6-30-20-40-62-40-60 0-78 22-140 22S170 38 110 38C60 38 52 60 46 84c-6 24-28 22-32-2C10 56 6 38 0 38z"/></svg>
-  <span class="drop" style="left:21%;top:40px;animation-delay:.2s"></span>
-  <span class="drop" style="left:46%;top:60px;animation-delay:1.4s"></span>
-  <span class="drop" style="left:79%;top:52px;animation-delay:2.3s"></span>
   <div class="wrap reveal">
-    <span class="eyebrow">Desde 2006</span>
-    <h2>20 años de miel paraguaya, <span class="gold-text">a un mensaje.</span></h2>
+    <svg class="logo" viewBox="0 0 255 96" role="img" aria-label="Miel Don Carlos · Miel de abejas"><use href="#logo"/></svg>
+    <h2>20 años de miel paraguaya, <span class="hl">a un mensaje.</span></h2>
     <p>Escribinos y te respondemos personalmente con productos, precios y opciones de entrega.</p>
     <a class="btn btn-wa" data-wa="¡Hola Don Carlos! Vi su página y quiero hacer un pedido." href="https://wa.me/595984399696">
       <svg><use href="#i-wa"/></svg> Hacer mi pedido por WhatsApp
@@ -657,7 +654,7 @@ footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;
 <footer>
   <div class="wrap">
     <div>
-      <div class="brand" style="margin-bottom:16px"><span class="brand-hex"><svg viewBox="0 0 24 24" fill="#2a1500"><ellipse cx="12" cy="13.5" rx="4.2" ry="6"/></svg></span><span>Miel Don Carlos</span></div>
+      <svg class="logo" viewBox="0 0 255 96" role="img" aria-label="Miel Don Carlos · Miel de abejas"><use href="#logo"/></svg>
       <p>Empresa familiar paraguaya desde 2006. Cerca de 1.000 colmenas en Pozo Colorado, Chaco, y local en Asunción.</p>
     </div>
     <div>
@@ -773,337 +770,5 @@ footer .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;
 })();
 </script>
 
-<!-- ================= 3D (Three.js) ================= -->
-<script type="importmap">
-{ "imports": {
-  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
-  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
-} }
-</script>
-<script type="module">
-import * as THREE from 'three';
-import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
-
-const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-function makeRenderer(canvas){
-  try{
-    const r = new THREE.WebGLRenderer({ canvas, antialias:true, alpha:true, powerPreference:'high-performance' });
-    r.setPixelRatio(Math.min(devicePixelRatio, 1.75));
-    r.toneMapping = THREE.ACESFilmicToneMapping;
-    r.toneMappingExposure = 0.9;
-    r.setClearColor(0x000000, 0);
-    return r;
-  }catch(e){
-    document.documentElement.classList.add('no-webgl');
-    return null;
-  }
-}
-
-function envFor(renderer){
-  const pmrem = new THREE.PMREMGenerator(renderer);
-  const tex = pmrem.fromScene(new RoomEnvironment(renderer), 0.04).texture;
-  pmrem.dispose();
-  return tex;
-}
-
-// Ejecuta el loop solo mientras el canvas está en pantalla
-function loopWhileVisible(el, tick){
-  let visible = false, raf = 0;
-  const frame = (t) => { tick(t / 1000); if(visible) raf = requestAnimationFrame(frame); };
-  new IntersectionObserver(([e]) => {
-    const was = visible; visible = e.isIntersecting;
-    if(visible && !was) raf = requestAnimationFrame(frame);
-    if(!visible) cancelAnimationFrame(raf);
-  }, { rootMargin:'100px' }).observe(el);
-}
-
-function hexShape(radius){
-  const s = new THREE.Shape();
-  for(let i = 0; i < 6; i++){
-    const a = Math.PI / 3 * i;
-    const x = Math.cos(a) * radius, y = Math.sin(a) * radius;
-    i ? s.lineTo(x, y) : s.moveTo(x, y);
-  }
-  s.closePath();
-  return s;
-}
-
-/* ---------------- Abeja ---------------- */
-function stripeTexture(){
-  const c = document.createElement('canvas'); c.width = 64; c.height = 256;
-  const g = c.getContext('2d');
-  const grad = g.createLinearGradient(0, 0, 64, 0);
-  grad.addColorStop(0, '#ffc21a'); grad.addColorStop(1, '#ffab00');
-  g.fillStyle = grad; g.fillRect(0, 0, 64, 256);
-  g.fillStyle = '#1a0d02';
-  [[0, 40], [78, 112], [140, 172], [200, 256]].forEach(([a, b]) => g.fillRect(0, a, 64, b - a));
-  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace;
-  return t;
-}
-
-function makeBee(stripes){
-  const bee = new THREE.Group();
-  const inner = new THREE.Group(); inner.rotation.y = -Math.PI / 2; bee.add(inner); // frente = +z
-
-  const body = new THREE.Mesh(
-    new THREE.SphereGeometry(0.5, 32, 24),
-    new THREE.MeshPhysicalMaterial({ map:stripes, roughness:0.45, clearcoat:0.6, sheen:1, sheenColor:new THREE.Color(0xffe6a0), sheenRoughness:0.6 })
-  );
-  body.rotation.z = Math.PI / 2; body.scale.set(0.95, 1.45, 0.95);
-  inner.add(body);
-
-  const dark = new THREE.MeshStandardMaterial({ color:0x140a02, roughness:0.35 });
-  const head = new THREE.Mesh(new THREE.SphereGeometry(0.34, 24, 18), dark);
-  head.position.x = 0.82; inner.add(head);
-  const eyeM = new THREE.MeshStandardMaterial({ color:0x000000, roughness:0.05, metalness:0.3 });
-  [-1, 1].forEach(s => {
-    const eye = new THREE.Mesh(new THREE.SphereGeometry(0.13, 16, 12), eyeM);
-    eye.position.set(1.0, 0.1, 0.17 * s); inner.add(eye);
-    const ant = new THREE.Mesh(new THREE.CylinderGeometry(0.018, 0.018, 0.5, 6), dark);
-    ant.position.set(1.02, 0.42, 0.12 * s); ant.rotation.z = -0.6; ant.rotation.x = 0.35 * s; inner.add(ant);
-  });
-  const sting = new THREE.Mesh(new THREE.ConeGeometry(0.07, 0.25, 8), dark);
-  sting.rotation.z = Math.PI / 2; sting.position.x = -0.8; inner.add(sting);
-
-  const wingGeo = new THREE.CircleGeometry(0.5, 24);
-  wingGeo.scale(0.55, 1, 1); wingGeo.translate(0, 0.5, 0);
-  const wingMat = new THREE.MeshPhysicalMaterial({ color:0xffffff, transparent:true, opacity:0.45, roughness:0.1, iridescence:1, side:THREE.DoubleSide, depthWrite:false });
-  const wings = [-1, 1].map(s => {
-    const pivot = new THREE.Group();
-    pivot.position.set(0.15, 0.4, 0.12 * s);
-    const w = new THREE.Mesh(wingGeo, wingMat);
-    w.rotation.x = 0.9 * s; w.rotation.z = -0.35;
-    pivot.add(w); inner.add(pivot);
-    pivot.userData.side = s;
-    return pivot;
-  });
-  bee.userData.wings = wings;
-  return bee;
-}
-
-/* ---------------- Escena del héroe: panal + abejas ---------------- */
-function heroScene(){
-  const canvas = document.getElementById('hero3d');
-  const renderer = makeRenderer(canvas);
-  if(!renderer) return;
-  const scene = new THREE.Scene();
-  scene.environment = envFor(renderer);
-  const camera = new THREE.PerspectiveCamera(35, 1, 0.1, 100);
-  camera.position.set(0, 0, 22);
-
-  scene.add(new THREE.HemisphereLight(0xffe0a0, 0x2a1200, 0.35));
-  const key = new THREE.DirectionalLight(0xfff0d0, 1.8); key.position.set(-6, 10, 12); scene.add(key);
-  const warm = new THREE.PointLight(0xff8a00, 160, 40); warm.position.set(6, -4, 8); scene.add(warm);
-
-  const comb = new THREE.Group();
-  scene.add(comb);
-
-  // celdas
-  const SP = 1.04, N = 6, cells = [];
-  for(let q = -N; q <= N; q++){
-    for(let r = Math.max(-N, -q - N); r <= Math.min(N, -q + N); r++){
-      const x = SP * 1.5 * q, y = SP * Math.sqrt(3) * (r + q / 2);
-      const d = Math.hypot(x, y), ang = Math.atan2(y, x);
-      if(d > 7.4 + Math.sin(ang * 3 + 1) * 1.1 + Math.cos(ang * 5) * 0.5) continue;
-      cells.push({ x, y, d, base:0.7 + Math.random() * 0.6, fill: Math.random() < 0.62 ? 0.55 + Math.random() * 0.4 : 0, hover:0 });
-    }
-  }
-
-  const wallShape = hexShape(1);
-  wallShape.holes.push(hexShape(0.84));
-  const wallGeo = new THREE.ExtrudeGeometry(wallShape, { depth:1, bevelEnabled:true, bevelThickness:0.04, bevelSize:0.035, bevelSegments:2, curveSegments:1 });
-  const waxMat = new THREE.MeshStandardMaterial({ color:0xffffff, roughness:0.38, metalness:0.08, envMapIntensity:0.55 });
-  const walls = new THREE.InstancedMesh(wallGeo, waxMat, cells.length);
-
-  const filled = cells.filter(c => c.fill);
-  const fillGeo = new THREE.ExtrudeGeometry(hexShape(0.86), { depth:1, bevelEnabled:true, bevelThickness:0.06, bevelSize:0.02, bevelSegments:3, curveSegments:1 });
-  const honeyMat = new THREE.MeshPhysicalMaterial({ color:0xe86a00, roughness:0.05, metalness:0, clearcoat:1, clearcoatRoughness:0.02, emissive:0xa04000, emissiveIntensity:0.7, envMapIntensity:0.9 });
-  const honey = new THREE.InstancedMesh(fillGeo, honeyMat, filled.length);
-  filled.forEach((c, i) => c.fi = i);
-
-  const waxA = new THREE.Color(0xb86e0c), waxB = new THREE.Color(0xffb52a), tmpC = new THREE.Color();
-  cells.forEach((c, i) => { c.tint = 0.8 + Math.random() * 0.3; walls.setColorAt(i, tmpC.copy(waxA).multiplyScalar(c.tint)); });
-  comb.add(walls, honey);
-
-  // abejas
-  const stripes = stripeTexture();
-  const bees = [0, 1, 2, 3].map(i => {
-    const b = makeBee(stripes);
-    b.scale.setScalar(0.62);
-    b.userData.path = { sp:0.32 + i * 0.06, ph:i * 1.9, rx:5.2 + i * 0.9, ry:1.6 + (i % 2) * 1.2, rz:2.6 + i * 0.4, dir: i % 2 ? -1 : 1 };
-    scene.add(b);
-    return b;
-  });
-
-  // polen flotante
-  const P = 140, ppos = new Float32Array(P * 3), pspeed = new Float32Array(P);
-  for(let i = 0; i < P; i++){
-    ppos[i * 3] = (Math.random() - 0.5) * 34;
-    ppos[i * 3 + 1] = (Math.random() - 0.5) * 20;
-    ppos[i * 3 + 2] = (Math.random() - 0.5) * 12;
-    pspeed[i] = 0.2 + Math.random() * 0.5;
-  }
-  const pGeo = new THREE.BufferGeometry(); pGeo.setAttribute('position', new THREE.BufferAttribute(ppos, 3));
-  const dot = document.createElement('canvas'); dot.width = dot.height = 64;
-  const dg = dot.getContext('2d'); const rg = dg.createRadialGradient(32, 32, 0, 32, 32, 32);
-  rg.addColorStop(0, 'rgba(255,220,140,1)'); rg.addColorStop(0.35, 'rgba(255,170,30,.6)'); rg.addColorStop(1, 'rgba(255,150,0,0)');
-  dg.fillStyle = rg; dg.fillRect(0, 0, 64, 64);
-  const pollen = new THREE.Points(pGeo, new THREE.PointsMaterial({ size:0.28, map:new THREE.CanvasTexture(dot), transparent:true, depthWrite:false, blending:THREE.AdditiveBlending }));
-  scene.add(pollen);
-
-  // layout responsivo
-  let mobile = false;
-  const center = new THREE.Vector3();
-  function resize(){
-    const w = canvas.clientWidth, h = canvas.clientHeight;
-    renderer.setSize(w, h, false);
-    camera.aspect = w / h; camera.updateProjectionMatrix();
-    mobile = w / h < 0.95;
-    if(mobile){
-      // ubica el panal en los ~400px inferiores del héroe
-      const vh = 2 * camera.position.z * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
-      const upp = vh / h;
-      comb.scale.setScalar(Math.min(0.6, 210 * upp / 6.8));
-      center.set(0, -vh / 2 + 200 * upp, 0);
-    }
-    else if(w / h < 1.4){ center.set(5.2, -0.6, -1); comb.scale.setScalar(0.72); }
-    else { center.set(6.2, -0.2, 0); comb.scale.setScalar(0.88); }
-    comb.position.copy(center);
-  }
-  new ResizeObserver(resize).observe(canvas); resize();
-
-  // interacción
-  const ndc = new THREE.Vector2(9, 9), look = new THREE.Vector2();
-  const ray = new THREE.Raycaster(), plane = new THREE.Plane(), hit = new THREE.Vector3(), nrm = new THREE.Vector3(), wp = new THREE.Vector3();
-  let hoverLocal = null;
-  addEventListener('pointermove', e => {
-    const r = canvas.getBoundingClientRect();
-    if(e.clientY > r.bottom) return;
-    ndc.set((e.clientX - r.left) / r.width * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1);
-  }, { passive:true });
-
-  const m = new THREE.Matrix4(), pos = new THREE.Vector3(), quat = new THREE.Quaternion(), sc = new THREE.Vector3();
-  const target = new THREE.Vector3();
-  let last = 0;
-
-  loopWhileVisible(canvas, t => {
-    const dt = Math.min(0.05, t - last || 0.016); last = t;
-    const T = reduceMotion ? 0 : t;
-    const scrollK = Math.min(1, scrollY / innerHeight);
-
-    // parallax + scroll
-    look.x += ((ndc.x > 2 ? 0 : ndc.x) - look.x) * 0.05;
-    look.y += ((ndc.y > 2 ? 0 : ndc.y) - look.y) * 0.05;
-    comb.rotation.set(-0.55 + look.y * 0.18 + scrollK * 0.5, -0.42 + look.x * 0.25, 0.08 + T * 0.03 + scrollK * 0.4);
-    comb.position.y = center.y + Math.sin(T * 0.6) * 0.25 + scrollK * 3;
-
-    // posición del mouse sobre el panal
-    comb.updateMatrixWorld();
-    nrm.set(0, 0, 1).applyQuaternion(comb.getWorldQuaternion(quat));
-    plane.setFromNormalAndCoplanarPoint(nrm, comb.getWorldPosition(wp));
-    hoverLocal = null;
-    if(ndc.x <= 2){
-      ray.setFromCamera(ndc, camera);
-      if(ray.ray.intersectPlane(plane, hit)) hoverLocal = comb.worldToLocal(hit);
-    }
-    quat.identity();
-
-    cells.forEach((c, i) => {
-      const hd = hoverLocal ? Math.max(0, 1 - Math.hypot(c.x - hoverLocal.x, c.y - hoverLocal.y) / 2.8) : 0;
-      c.hover += (hd * hd - c.hover) * 0.1;
-      const h = c.base + 0.22 * Math.sin(T * 1.5 - c.d * 0.75) + c.hover * 1.6;
-      pos.set(c.x, c.y, 0); sc.set(1, 1, Math.max(0.15, h));
-      m.compose(pos, quat, sc); walls.setMatrixAt(i, m);
-      walls.setColorAt(i, tmpC.copy(waxA).multiplyScalar(c.tint).lerp(waxB, c.hover));
-      if(c.fi !== undefined){
-        sc.set(1, 1, Math.max(0.1, h * c.fill + c.hover * 0.25));
-        m.compose(pos, quat, sc); honey.setMatrixAt(c.fi, m);
-      }
-    });
-    walls.instanceMatrix.needsUpdate = true; walls.instanceColor.needsUpdate = true;
-    honey.instanceMatrix.needsUpdate = true;
-
-    // vuelo de las abejas alrededor del panal
-    bees.forEach(b => {
-      const p = b.userData.path;
-      const path = k => target.set(
-        center.x + Math.cos(k * p.sp * p.dir + p.ph) * p.rx * comb.scale.x,
-        comb.position.y + Math.sin(k * p.sp * 2 + p.ph) * p.ry * comb.scale.x / 0.88 + Math.sin(k * 3 + p.ph) * 0.15,
-        3.5 + Math.sin(k * p.sp * p.dir + p.ph) * p.rz
-      );
-      b.position.copy(path(T + 1));
-      b.lookAt(path(T + 1.08));
-      b.userData.wings.forEach(w => w.rotation.x = Math.sin(t * 55 + w.userData.side) * 0.7 * w.userData.side);
-    });
-
-    // polen
-    for(let i = 0; i < P; i++){
-      ppos[i * 3 + 1] += pspeed[i] * dt * (reduceMotion ? 0 : 1);
-      ppos[i * 3] += Math.sin(t + i) * dt * 0.15;
-      if(ppos[i * 3 + 1] > 10) ppos[i * 3 + 1] = -10;
-    }
-    pGeo.attributes.position.needsUpdate = true;
-
-    renderer.render(scene, camera);
-  });
-}
-
-/* ---------------- Panales flotantes detrás del carrusel ---------------- */
-function combsScene(){
-  const canvas = document.getElementById('combs3d');
-  const renderer = makeRenderer(canvas);
-  if(!renderer) return;
-  const scene = new THREE.Scene();
-  scene.environment = envFor(renderer);
-  const camera = new THREE.PerspectiveCamera(35, 1, 0.1, 100);
-  camera.position.set(0, 0, 14);
-
-  scene.add(new THREE.HemisphereLight(0xfff0d0, 0x2a1200, 0.3));
-  const key = new THREE.DirectionalLight(0xffffff, 1.8); key.position.set(-4, 6, 6); scene.add(key);
-  const rim = new THREE.PointLight(0xffa020, 120, 30); rim.position.set(3, 2, 4); scene.add(rim);
-
-  const chunkShape = hexShape(0.42); chunkShape.holes.push(hexShape(0.34));
-  const chunkGeo = new THREE.ExtrudeGeometry(chunkShape, { depth:0.5, bevelEnabled:true, bevelThickness:0.03, bevelSize:0.02, bevelSegments:1 });
-  const chunkFillGeo = new THREE.ExtrudeGeometry(hexShape(0.35), { depth:0.35, bevelEnabled:false });
-  const chunkMat = new THREE.MeshStandardMaterial({ color:0xb8700f, roughness:0.38, envMapIntensity:0.6 });
-  const chunkHoney = new THREE.MeshPhysicalMaterial({ color:0xe86a00, roughness:0.05, clearcoat:1, emissive:0xa04000, emissiveIntensity:0.6, envMapIntensity:0.8 });
-  const spots = [[-7.5, 2.6, -2], [7.2, -2.4, -2.5], [-6.2, -3.2, -1], [6.6, 3.1, -1.5], [-9.5, -0.4, -4], [9.6, 0.6, -4], [-3.6, 4.2, -5], [3.8, -4.4, -5], [0.2, 4.9, -6]];
-  const chunks = spots.map(([x, y, z], i) => {
-    const g = new THREE.Group();
-    g.add(new THREE.Mesh(chunkGeo, chunkMat));
-    if(i % 3 !== 2) g.add(new THREE.Mesh(chunkFillGeo, chunkHoney));
-    g.position.set(x, y, z); g.rotation.set(Math.random() * 3, Math.random() * 3, 0);
-    g.scale.setScalar(1 + (i % 3) * 0.25);
-    g.userData = { x, y, sp:0.4 + Math.random() * 0.5, ph:i };
-    scene.add(g);
-    return g;
-  });
-
-  function resize(){
-    const w = canvas.clientWidth, h = canvas.clientHeight;
-    renderer.setSize(w, h, false);
-    camera.aspect = w / h; camera.updateProjectionMatrix();
-    // en pantallas angostas, acercar los panales al centro para que se vean
-    const k = Math.min(1, camera.aspect / 1.8);
-    chunks.forEach(c => c.position.x = c.userData.x * Math.max(0.42, k));
-  }
-  new ResizeObserver(resize).observe(canvas); resize();
-
-  let last = 0;
-  loopWhileVisible(canvas, t => {
-    const dt = Math.min(0.05, t - last || 0.016); last = t;
-    const m = reduceMotion ? 0 : 1;
-    chunks.forEach(c => {
-      c.rotation.x += dt * c.userData.sp * 0.4 * m; c.rotation.y += dt * c.userData.sp * 0.6 * m;
-      c.position.y = c.userData.y + Math.sin(t * c.userData.sp + c.userData.ph) * 0.3 * m;
-    });
-    renderer.render(scene, camera);
-  });
-}
-
-heroScene();
-combsScene();
-</script>
 </body>
 </html>

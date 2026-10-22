@@ -1,8 +1,8 @@
 # Miel Don Carlos — página de vendas
 
 Landing page de vendas da **Miel Don Carlos** (Asunción, Paraguai), empresa
-familiar desde 2006, com elementos 3D e todas as chamadas para ação indo para o
-WhatsApp do cliente. Os dados da trajetória vêm do material "Historia de Miel
+familiar desde 2006, seguindo a identidade visual oficial da marca, com todas as
+chamadas para ação indo para o WhatsApp do cliente. Os dados da trajetória vêm do material "Historia de Miel
 Don Carlos" enviado pelo cliente.
 
 ```
@@ -13,8 +13,7 @@ img/historia fotos da trajetória (extraídas do PDF do cliente)
 
 ## O que tem na página
 
-- **Topo 3D (Three.js):** favo de mel interativo, com as células subindo sob o
-  mouse e abelhas 3D voando em volta.
+- **Topo:** sol listrado do logo atrás de três produtos (Clásica, Apisana, Gourmet).
 - **Origem:** a marca leva o nome do pai dos fundadores (2006, 50 colmeias).
 - **Carrossel 3D de produtos:** Apisana (o mais vendido), Clásica, Gourmet,
   Especialidades, Bienestar, sachet e propóleo, cada um com pedido no WhatsApp.
@@ -23,6 +22,19 @@ img/historia fotos da trajetória (extraídas do PDF do cliente)
 - **Para empresas:** supermercados, confeitarias, restaurantes e indústrias.
 - Valores, como pedir, FAQ e CTA final.
 - Botão flutuante do WhatsApp.
+
+## Identidade visual
+
+- **Logo oficial:** vetorizado a partir do material do cliente e embutido como
+  `<symbol id="logo">` no `index.html` (header, CTA final e rodapé). O sol e o
+  texto "MIEL DE ABEJAS" foram redesenhados em vetor; o "Don Carlos" foi
+  vetorizado do original. Se o cliente enviar o logo em SVG/AI, substitua o
+  conteúdo do símbolo.
+- **Cores** (tokens no topo do CSS): amarelo CMYK 6/0/100/0 `#F3DF12` (destaques),
+  dourado CMYK 0/20/60/20 `#CCA352` e bege (fundos artesanais), verde P375C
+  `#97D700` (natural/origem), laranja P1655C `#FC4C02` (CTAs), azul P306C
+  `#00B5E2` e coral P1785C `#F8485E` (só nas cores de cada linha, como nas etiquetas).
+- **Tipografia:** Poppins em toda a página (títulos 700/800, textos 400, botões 600).
 
 ## WhatsApp
 
@@ -38,5 +50,4 @@ mesmo nome. Fotos quadradas (1:1), de preferência com 800 px ou mais.
 ## Publicar
 
 É um site estático: basta subir a pasta para qualquer hospedagem (Vercel,
-Netlify, GitHub Pages, Hostinger…). O Three.js e as fontes vêm de CDN, então
-não há build nem dependências.
+Netlify, GitHub Pages, Hostinger…). As fontes vêm do Google Fonts; não há build nem dependências.
